@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #211e25;
+  scroll-behavior: smooth;
+}
+
+.footer-marquee {
+  will-change: transform;
+}
+
+.footer-marquee-left {
+  animation: footerMarqueeLeft 30s linear infinite;
+}
+
+.footer-marquee-right {
+  animation: footerMarqueeRight 30s linear infinite;
+}
+
+.group\/marquee:hover .footer-marquee-left,
+.group\/marquee:hover .footer-marquee-right {
+  animation-play-state: paused;
+}
+
+@keyframes footerMarqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+@keyframes footerMarqueeRight {
+  from {
+    transform: translateX(-33.333%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
