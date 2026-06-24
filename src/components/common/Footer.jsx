@@ -198,7 +198,7 @@ const Footer = () => {
           <div className="flex flex-col gap-8">
             <div ref={logoRef}>
               <a href="/" className="group flex items-center gap-3">
-                <img src="/logo.png" alt="" className="h-14" />
+                <img src="/logo-update.png" alt="" className="h-14" />
               </a>
             </div>
 

@@ -43,7 +43,7 @@ const ContactFrom = () => {
         { willChange: "transform, opacity" },
       );
 
-      // Title animation — simple y + opacity only, NO rotateX (it causes shake without perspective)
+      // Title animation — Animates each word on its own clean layer line block
       gsap.fromTo(
         titleRefs.current,
         { y: 50, opacity: 0 },
@@ -51,7 +51,7 @@ const ContactFrom = () => {
           y: 0,
           opacity: 1,
           duration: 0.9,
-          stagger: 0.1,
+          stagger: 0.12,
           ease: "expo.out",
           force3D: true,
           scrollTrigger: { trigger: sectionRef.current, start: "top 72%" },
@@ -61,7 +61,7 @@ const ContactFrom = () => {
         },
       );
 
-      // Form animation — NO filter:blur (causes repaint & jitter), use x + opacity only
+      // Form animation — Left layout slide slide-in sequence
       gsap.fromTo(
         formRef.current,
         { x: -50, opacity: 0 },
@@ -78,7 +78,7 @@ const ContactFrom = () => {
         },
       );
 
-      // Input fields — simple y + opacity stagger
+      // Input fields — clean y axis cascade slide down
       gsap.fromTo(
         inputRefs.current,
         { y: 25, opacity: 0 },
@@ -96,7 +96,7 @@ const ContactFrom = () => {
         },
       );
 
-      // Sidebar cards — x + opacity, no scale (scale + x together can cause subpixel shake)
+      // Sidebar cards — Right side structural items entry animation
       gsap.fromTo(
         sideRefs.current,
         { x: 50, opacity: 0 },
@@ -118,14 +118,22 @@ const ContactFrom = () => {
     return () => ctx.revert();
   }, []);
 
+  // Safe ref tracking callback handler that prevents infinite array inflation during mutations
+  const setInputRef = (el, index) => {
+    if (el) {
+      inputRefs.current[index] = el;
+    }
+  };
+
   const Field = ({
     icon: Icon,
     label,
     placeholder,
     type = "text",
     required,
+    index,
   }) => (
-    <div ref={(el) => inputRefs.current.push(el)} className="group">
+    <div ref={(el) => setInputRef(el, index)} className="group">
       <label className="mb-2 block text-[11px] font-black uppercase tracking-[0.16em] text-white/65">
         {label} {required && <span className="text-lime-300">*</span>}
       </label>
@@ -152,20 +160,22 @@ const ContactFrom = () => {
 
       <div className="container relative z-10 mx-auto">
         <div className="mx-auto mb-14 max-w-4xl text-center">
-          {["Send an", "inquiry"].map((line, index) => (
-            <div key={index} className="inline-block overflow-hidden pb-1">
-              <h2
-                ref={(el) => (titleRefs.current[index] = el)}
-                className={`inline text-4xl font-black uppercase tracking-[-0.06em] md:text-6xl ${
-                  index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
-                }`}
-              >
-                {index === 1 ? ` ${line}` : line}
-              </h2>
-            </div>
-          ))}
+          <div className="flex space-x-4 items-center justify-center space-y-2 sm:space-y-3">
+            {["Send", "An", "inquiry"].map((line, index) => (
+              <div key={index} className="overflow-hidden pb-1">
+                <h2
+                  ref={(el) => (titleRefs.current[index] = el)}
+                  className={`text-4xl font-black uppercase tracking-[-0.06em] md:text-6xl ${
+                    index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                  }`}
+                >
+                  {line}
+                </h2>
+              </div>
+            ))}
+          </div>
 
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/55 md:text-base">
+          <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-white/55 md:text-base">
             Fill out the form and our team will contact you with a personalized
             response as soon as possible.
           </p>
@@ -196,63 +206,82 @@ const ContactFrom = () => {
 
             <div className="relative z-10 grid gap-5 md:grid-cols-2">
               <Field
+                index={0}
                 icon={FiUser}
                 label="Name and surname"
                 placeholder="Your name"
                 required
               />
               <Field
+                index={1}
                 icon={FiMail}
                 label="Email"
                 placeholder="you@email.com"
                 type="email"
                 required
               />
-              <Field icon={FiPhone} label="Phone" placeholder="+880..." />
               <Field
+                index={2}
+                icon={FiPhone}
+                label="Phone"
+                placeholder="+880..."
+              />
+              <Field
+                index={3}
                 icon={FiBriefcase}
                 label="Company"
                 placeholder="Company name"
               />
 
-              <div ref={(el) => inputRefs.current.push(el)} className="group">
+              {/* Industry Dropdown Input Control Selection Fields */}
+              <div ref={(el) => setInputRef(el, 4)} className="group">
                 <label className="mb-2 block text-[11px] font-black uppercase tracking-[0.16em] text-white/65">
                   Industry
                 </label>
                 <div className="relative">
-                  <FiBriefcase className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
-                  <select className="h-14 w-full appearance-none rounded-2xl border border-white/10 bg-black/20 pl-12 pr-10 text-sm font-semibold text-black outline-none backdrop-blur-xl transition-all duration-500 focus:border-lime-300/60 focus:bg-white/[0.06]">
-                    <option>Select an industry</option>
-                    <option>Hospitality & Tourism</option>
-                    <option>Personal Care & Beauty</option>
-                    <option>Transportation & Logistics</option>
-                    <option>Home & Repair Services</option>
+                  <FiBriefcase className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35 z-10" />
+                  <select className="h-14 w-full appearance-none rounded-2xl border border-white/10 bg-[#1e222b] pl-12 pr-10 text-sm font-semibold text-white outline-none backdrop-blur-xl transition-all duration-500 focus:border-lime-300/60 focus:bg-white/[0.06]">
+                    <option className="bg-[#151820] text-white">
+                      Select an industry
+                    </option>
+                    <option className="bg-[#151820] text-white">
+                      Hospitality & Tourism
+                    </option>
+                    <option className="bg-[#151820] text-white">
+                      Personal Care & Beauty
+                    </option>
+                    <option className="bg-[#151820] text-white">
+                      Transportation & Logistics
+                    </option>
+                    <option className="bg-[#151820] text-white">
+                      Home & Repair Services
+                    </option>
                   </select>
-                  <FiChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-white/35" />
+                  <FiChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-white/35 pointer-events-none z-10" />
                 </div>
               </div>
 
-              <div ref={(el) => inputRefs.current.push(el)} className="group">
+              {/* Quantity Metrics Operational Counter Options Dropdown Selection Fields */}
+              <div ref={(el) => setInputRef(el, 5)} className="group">
                 <label className="mb-2 block text-[11px] font-black uppercase tracking-[0.16em] text-white/65">
                   How many workers?
                 </label>
                 <div className="relative">
-                  <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35" />
-                  <select className="h-14 w-full appearance-none rounded-2xl border border-white/10 bg-black/20 pl-12 pr-10 text-sm font-semibold text-black outline-none backdrop-blur-xl transition-all duration-500 focus:border-lime-300/60 focus:bg-white/[0.06]">
-                    <option>Choose a number</option>
-                    <option>1 - 5</option>
-                    <option>6 - 20</option>
-                    <option>21 - 50</option>
-                    <option>50+</option>
+                  <FiUser className="absolute left-4 top-1/2 -translate-y-1/2 text-white/35 z-10" />
+                  <select className="h-14 w-full appearance-none rounded-2xl border border-white/10 bg-[#1e222b] pl-12 pr-10 text-sm font-semibold text-white outline-none backdrop-blur-xl transition-all duration-500 focus:border-lime-300/60 focus:bg-white/[0.06]">
+                    <option className="bg-[#151820] text-white">
+                      Choose a number
+                    </option>
+                    <option className="bg-[#151820] text-white">1 - 5</option>
+                    <option className="bg-[#151820] text-white">6 - 20</option>
+                    <option className="bg-[#151820] text-white">21 - 50</option>
+                    <option className="bg-[#151820] text-white">50+</option>
                   </select>
-                  <FiChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-white/35" />
+                  <FiChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-white/35 pointer-events-none z-10" />
                 </div>
               </div>
 
-              <div
-                ref={(el) => inputRefs.current.push(el)}
-                className="md:col-span-2"
-              >
+              <div ref={(el) => setInputRef(el, 6)} className="md:col-span-2">
                 <label className="mb-2 block text-[11px] font-black uppercase tracking-[0.16em] text-white/65">
                   Message <span className="text-lime-300">*</span>
                 </label>
@@ -329,7 +358,6 @@ const ContactFrom = () => {
                     label: "E-mail",
                     text: "info@futurewave.online",
                   },
-                  // { icon: FiPhone, label: "Phone", text: "+880 1700 000 000" },
                   {
                     icon: FiMapPin,
                     label: "Address",
