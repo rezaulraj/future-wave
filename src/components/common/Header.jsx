@@ -97,9 +97,9 @@ const Header = () => {
   return (
     <>
       <header className="fixed left-0 top-0 z-50 w-full px-5 py-4 md:px-12">
-        <nav className="mx-auto flex container items-center justify-between rounded-full border border-white/10 bg-gradient-to-r from-[#10131a] via-[#10131a]/70 to-[#10131a]/20 px-5 py-3 shadow-2xl backdrop-blur-xl">
+        <nav className="mx-auto flex container items-center justify-between rounded-full border border-white/10 bg-gradient-to-r from-[#10131a]/85 via-[#10131a]/70 to-[#10131a]/20 px-5 py-3 shadow-2xl backdrop-blur-xl">
           <a href="/" className="group flex items-center gap-3">
-            <img src="/logo-update.png" alt="" className="h-14" />
+            <img src="/newlogo.png" alt="" className="h-20" />
           </a>
 
           <button
