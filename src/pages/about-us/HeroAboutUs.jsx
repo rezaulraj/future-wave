@@ -97,7 +97,7 @@ const HeroAboutUs = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8] font-arimo px-5 py-28 md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-hidden bg-[#31323d]/95 text-[#F6F5E8] font-arimo px-5 py-28 md:px-14 lg:py-36"
     >
       <Helmet>
         <title>
@@ -139,12 +139,6 @@ const HeroAboutUs = () => {
           {JSON.stringify(schemaOrgAboutData)}
         </script>
       </Helmet>
-
-      <SvgBackground className="opacity-70" />
-
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D] to-[#31323D]/90" />
-      {/* <div className="absolute -left-28 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
-      {/* <div className="absolute -right-32 bottom-10 h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="relative w-full">

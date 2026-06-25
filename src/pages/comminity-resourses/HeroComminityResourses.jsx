@@ -138,7 +138,7 @@ const HeroComminityResourses = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-hidden bg-[#31323D]/95 text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
     >
       <Helmet>
         <title>Hiring Resources & Partner Communities | Future Wave</title>
@@ -181,9 +181,6 @@ const HeroComminityResourses = () => {
           {JSON.stringify(schemaOrgCommunityData)}
         </script>
       </Helmet>
-      <SvgBackground className="opacity-10" />
-
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/95 to-[#31323D]/90" />
 
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="relative w-full">

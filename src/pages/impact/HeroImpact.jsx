@@ -182,7 +182,7 @@ const HeroImpact = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-visible bg-[#31323D] text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-visible bg-[#31323d]/95 text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
     >
       <Helmet>
         <title>Our Sustainability & Eco Impact | Future Wave Recruitment</title>
@@ -226,10 +226,6 @@ const HeroImpact = () => {
         </script>
       </Helmet>
 
-      <SvgBackground className="opacity-60" />
-
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/90 to-[#31323D]/90" />
-
       <div
         ref={previewRef}
         className="pointer-events-none absolute left-0 top-0 z-50 hidden w-80 overflow-hidden lg:block"
@@ -264,7 +260,7 @@ const HeroImpact = () => {
             <div className="overflow-hidden pb-2">
               <h1
                 ref={titleRef}
-                className="text-[4.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] text-[#F6F5E8] sm:text-[6rem] md:text-[8rem] xl:text-[10rem]"
+                className="text-[4.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] text-[#F6F5E8] sm:text-[6rem] md:text-[7rem] xl:text-[8rem]"
               >
                 Impact
               </h1>

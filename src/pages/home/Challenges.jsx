@@ -210,12 +210,9 @@ const Challenges = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-visible font-archivo bg-[#31323D] px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-visible font-arimo bg-[#31323d]/95 text-[#F6F5E8] px-5 py-24 md:px-14 md:py-32"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D]/95 via-[#31323D]/70 to-[#31323D]/20" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
 
-      {/* floating video preview */}
       <div
         ref={previewRef}
         className="pointer-events-none absolute left-0 top-0 z-50 hidden w-80 overflow-hidden rounded-[1.6rem] border border-white/15 bg-black/35 p-2 opacity-0 shadow-[0_30px_100px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
@@ -249,7 +246,7 @@ const Challenges = () => {
             className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-lime-300/25 bg-white/[0.04] px-4 py-2 font-arimo backdrop-blur-xl "
           >
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#F6F5E8]/80">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#F6F5E8]/80">
               Is it familiar to you?
             </p>
           </div>
@@ -258,7 +255,7 @@ const Challenges = () => {
             <div key={index} className="inline-block overflow-hidden pb-1">
               <h2
                 ref={(el) => (titleRefs.current[index] = el)}
-                className="inline text-4xl font-normal font-arimo tracking-[-0.06em] text-[#F6F5E8] md:text-6xl"
+                className="inline text-4xl font-semibold font-arimo tracking-[-0.06em] text-[#F6F5E8] md:text-5xl"
               >
                 {index === 1 ? (
                   <span className="text-lime-300"> {line}</span>

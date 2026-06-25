@@ -141,9 +141,9 @@ const OurStory = () => {
     <section
       id="our-story"
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/90 to-[#31323D]/90" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/90 to-[#31323D]/90" /> */}
 
       <div className="container relative z-10 mx-auto grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div>

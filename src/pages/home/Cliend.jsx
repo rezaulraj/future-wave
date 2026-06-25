@@ -327,7 +327,7 @@ const Client = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#31323D] text-[#F6F5E8] font-arimo"
+      className="bg-[#31323d]/95 text-[#F6F5E8] font-arimo"
       style={{
         position: "relative",
         overflow: "hidden",

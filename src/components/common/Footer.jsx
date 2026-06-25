@@ -190,9 +190,9 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative overflow-hidden bg-[#31323D] text-[#F6F5E8] font-arimo"
+      className="relative overflow-hidden bg-[#31323d]/95 text-[#F6F5E8] font-arimo"
     >
-      <SvgBackground className="opacity-10" />
+      {/* <SvgBackground className="opacity-10" /> */}
 
       {/* <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" /> */}
 

@@ -56,16 +56,8 @@ const Contact = () => {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#151820] text-[#f4f1e8]">
-      {/* <div className="fixed inset-0 z-0">
-        <SvgBackground className="opacity-45" />
-      </div> */}
-
-      {/* <div className="fixed inset-0 z-[1] bg-[radial-gradient(circle_at_15%_10%,rgba(190,242,100,0.10),transparent_28%),radial-gradient(circle_at_85%_45%,rgba(34,211,238,0.08),transparent_30%),linear-gradient(90deg,rgba(16,19,26,0.94),rgba(16,19,26,0.72),rgba(16,19,26,0.88))]" /> */}
-
-      <div className="fixed left-[-160px] top-[15%] z-[1] h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[160px]" />
-      <div className="fixed right-[-180px] top-[45%] z-[1] h-[600px] w-[600px] rounded-full bg-cyan-400/10 blur-[180px]" />
-
+    <main className="relative min-h-screen overflow-hidden bg-[#31323d] text-[#F6F5E8]">
+      <SvgBackground className="opacity-100 fixed" />
       <div className="relative z-10">
         <section
           ref={(el) => (sectionRefs.current[0] = el)}

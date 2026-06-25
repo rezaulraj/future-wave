@@ -109,9 +109,8 @@ const Faqs = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-
       <div className="container relative z-10 mx-auto">
         <div className="overflow-hidden rounded-[2.4rem] border border-white/10 bg-white/[0.04] shadow-[0_35px_120px_rgba(0,0,0,0.42)] backdrop-blur-2xl">
           <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
@@ -120,14 +119,14 @@ const Faqs = () => {
 
               <p
                 ref={(el) => (titleRefs.current[0] = el)}
-                className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-lime-300"
+                className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-lime-300"
               >
                 FAQ
               </p>
 
               <h2
                 ref={(el) => (titleRefs.current[1] = el)}
-                className="max-w-md text-4xl font-black leading-[0.95] tracking-[-0.06em] text-[#f4f1e8] md:text-6xl"
+                className="max-w-md text-4xl font-semibold leading-[0.95] tracking-[-0.06em] text-[#f4f1e8] md:text-6xl"
               >
                 Frequently asked{" "}
                 <span className="text-lime-300">questions</span>
@@ -135,7 +134,7 @@ const Faqs = () => {
 
               <p
                 ref={(el) => (titleRefs.current[2] = el)}
-                className="mt-6 max-w-sm text-base leading-8 text-white/60"
+                className="mt-6 max-w-sm text-base leading-8 text-[#F6F5E8]/60 font-montserrat"
               >
                 Answers to common questions about collaboration, recruitment
                 support and hiring timelines.
@@ -144,7 +143,7 @@ const Faqs = () => {
               <a
                 ref={ctaRef}
                 href="#contact-form"
-                className="group mt-8 inline-flex items-center gap-3 overflow-hidden rounded-2xl border border-lime-300/25 bg-white/[0.04] px-6 py-4 text-sm font-black text-white transition-all duration-500 hover:border-lime-300 hover:bg-lime-300 hover:text-black"
+                className="group mt-8 inline-flex items-center gap-3 overflow-hidden rounded-2xl border border-lime-300/25 bg-[#F6F5E8]/[0.04] px-6 py-4 text-sm font-semibold text-[#F6F5E8] transition-all duration-500 hover:border-lime-300 hover:bg-lime-300 hover:text-black"
               >
                 Contact us
                 <FiArrowRight className="transition-all duration-500 group-hover:translate-x-1" />
@@ -159,8 +158,10 @@ const Faqs = () => {
                   <div
                     key={index}
                     ref={(el) => (faqRefs.current[index] = el)}
-                    className={`group border-b border-white/10 transition-all duration-500 last:border-b-0 ${
-                      isOpen ? "bg-white/[0.045]" : "hover:bg-white/[0.025]"
+                    className={`group border-b border-[#F6F5E8]/10 transition-all duration-500 last:border-b-0 ${
+                      isOpen
+                        ? "bg-[#F6F5E8]/[0.045]"
+                        : "hover:bg-[#F6F5E8]/[0.025]"
                     }`}
                   >
                     <button
@@ -168,8 +169,8 @@ const Faqs = () => {
                       className="flex w-full items-center justify-between gap-6 p-7 text-left md:p-8"
                     >
                       <span
-                        className={`text-base font-black transition-all duration-500 md:text-lg ${
-                          isOpen ? "text-[#f4f1e8]" : "text-white/65"
+                        className={`text-base font-semibold transition-all duration-500 md:text-lg ${
+                          isOpen ? "text-[#F6F5E8]" : "text-[#F6F5E8]/65"
                         }`}
                       >
                         {item.q}

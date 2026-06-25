@@ -77,10 +77,8 @@ const OurLocations = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      {/* <div className="absolute left-[-120px] top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
-      {/* <div className="absolute bottom-0 right-[-120px] h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       <div className="container relative z-10 mx-auto">
         <div className="mx-auto mb-12 max-w-4xl text-center">
@@ -88,8 +86,8 @@ const OurLocations = () => {
             <div key={index} className="inline-block overflow-hidden pb-1">
               <h2
                 ref={(el) => (titleRefs.current[index] = el)}
-                className={`inline text-4xl font-black uppercase tracking-[-0.06em] md:text-6xl ${
-                  index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                className={`inline text-4xl font-semibold uppercase tracking-[-0.06em] md:text-6xl ${
+                  index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                 }`}
               >
                 {index === 1 ? ` ${line}` : line}
@@ -97,7 +95,7 @@ const OurLocations = () => {
             </div>
           ))}
 
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/55 md:text-base">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-7 font-montserrat text-[#F6F5E8]/55 md:text-base">
             Visit our office or contact us online. We are ready to help with
             hiring, partnerships and recruitment support.
           </p>
@@ -105,7 +103,7 @@ const OurLocations = () => {
 
         <div
           ref={mapRef}
-          className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/[0.045] p-3 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
+          className="relative mx-auto max-w-7xl overflow-hidden rounded-[2.2rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.045] p-3 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
         >
           <div className="relative h-[520px] overflow-hidden rounded-[1.8rem]">
             <iframe
@@ -138,13 +136,13 @@ const OurLocations = () => {
                 </div>
 
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.28em] text-lime-300">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-lime-300">
                     Our Location
                   </p>
-                  <h3 className="mt-2 text-2xl font-black text-[#f4f1e8]">
+                  <h3 className="mt-2 text-2xl font-semibold text-[#F6F5E8]">
                     Sesvete, Croatia
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">
+                  <p className="mt-2 text-sm leading-7 text-[#F6F5E8]/60">
                     Future Wave office — available for online consultation and
                     partnership discussions.
                   </p>
@@ -154,7 +152,7 @@ const OurLocations = () => {
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
                 <a
                   href="mailto:info@futurewave.online"
-                  className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-bold text-white/70 transition-all duration-500 hover:border-lime-300/40 hover:bg-lime-300 hover:text-black"
+                  className="flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm font-bold text-[#F6F5E8]/70 transition-all duration-500 hover:border-lime-300/40 hover:bg-lime-300 hover:text-black"
                 >
                   <FiMail /> info@futurewave.online
                 </a>

@@ -195,17 +195,13 @@ const OurBlogs = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute left-[-120px] top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
-
-      <div className="absolute bottom-0 right-[-120px] h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" />
-
       <div className="container relative z-10 mx-auto">
         <div className="mb-16 max-w-5xl">
           <p
             ref={(el) => (titleRefs.current[0] = el)}
-            className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-lime-300"
+            className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-lime-300"
           >
             Insights
           </p>
@@ -213,7 +209,7 @@ const OurBlogs = () => {
           <div className="overflow-hidden pb-2">
             <h2
               ref={(el) => (titleRefs.current[1] = el)}
-              className="text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.07em] text-[#f4f1e8] sm:text-[4.5rem] md:text-[6rem]"
+              className="text-[3rem] font-semibold uppercase leading-[0.9] tracking-[-0.07em] text-[#F6F5E8] sm:text-[4.5rem] md:text-[5rem]"
             >
               Recruitment <span className="text-lime-300">resources</span>
             </h2>
@@ -221,7 +217,7 @@ const OurBlogs = () => {
 
           <p
             ref={(el) => (titleRefs.current[2] = el)}
-            className="mt-7 max-w-2xl text-base leading-8 text-white/65 md:text-lg"
+            className="mt-7 max-w-2xl text-base leading-8 font-montserrat text-[#F6F5E8]/75 md:text-lg"
           >
             Modern recruitment insights, hiring guides and practical EU
             workforce solutions for employers and global teams.
@@ -234,7 +230,7 @@ const OurBlogs = () => {
               key={blog.slug}
               to={`/communities-resources/${blog.slug}`}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-[0_25px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-700 hover:-translate-y-3 hover:border-lime-300/40 hover:bg-white/[0.07]"
+              className="group relative overflow-hidden rounded-[2rem] border border-[#F6F5E8]/10 bg-[#F6F5E8] shadow-[0_25px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-700 hover:-translate-y-3 hover:border-lime-300/40 hover:bg-[#F6F5E8]/90"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -254,11 +250,11 @@ const OurBlogs = () => {
                 </div>
 
                 <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between">
-                  <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-white/75 backdrop-blur-xl">
+                  <span className="rounded-full border border-[#F6F5E8]/10 bg-[#31323a]/30 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#F6F5E8]/75 backdrop-blur-xl">
                     {blog.category}
                   </span>
 
-                  <span className="flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/60 backdrop-blur-xl">
+                  <span className="flex items-center gap-2 rounded-full border border-[#F6F5E8]/10 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[#F6F5E8]/60 backdrop-blur-xl">
                     <FiClock />
                     {blog.time}
                   </span>
@@ -269,20 +265,20 @@ const OurBlogs = () => {
                 <div className="absolute -right-16 -top-16 h-36 w-36 rounded-full bg-lime-300/10 blur-3xl transition-all duration-700 group-hover:bg-lime-300/20" />
 
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-black leading-tight tracking-[-0.045em] text-[#f4f1e8] transition-all duration-500 group-hover:text-lime-300">
+                  <h3 className="text-2xl font-semibold leading-tight tracking-[-0.045em] text-[#31323a] transition-all duration-500 group-hover:text-[#31323a]/90">
                     {blog.title}
                   </h3>
 
-                  <p className="mt-5 text-sm leading-7 text-white/58 transition-all duration-500 group-hover:text-white/75">
+                  <p className="mt-5 text-sm leading-7 text-[#31323a] font-montserrat transition-all duration-500 group-hover:text-[#31323a]/75">
                     {blog.description}
                   </p>
 
                   <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
-                    <span className="text-xs font-black uppercase tracking-[0.18em] text-white/45">
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#31323a] group-hover:underline">
                       Read article
                     </span>
 
-                    <span className="grid h-10 w-10 place-items-center rounded-full border border-white/10 bg-black/20 text-white/45 transition-all duration-500 group-hover:translate-x-1 group-hover:border-lime-300 group-hover:bg-lime-300 group-hover:text-black">
+                    <span className="grid h-10 w-10 place-items-center rounded-full border border-[#F6F5E8]/10 bg-[#31323a] text-[#F6F5E8] transition-all duration-500 group-hover:translate-x-1 group-hover:border-lime-300 group-hover:bg-lime-300 group-hover:text-black">
                       <FiArrowRight />
                     </span>
                   </div>

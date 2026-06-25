@@ -72,7 +72,7 @@ const HeroContact = () => {
     return () => ctx.revert();
   }, []);
 
-  const title = ["LET'S START", "A BETTER", "CONVERSATION"];
+  const title = ["LET'S START A BETTER", "CONVERSATION"];
 
   const schemaOrgContactData = {
     "@context": "https://schema.org",
@@ -97,7 +97,7 @@ const HeroContact = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#151820] px-5 py-28 text-white md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-hidden bg-[#31323d]/95 text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
     >
       <Helmet>
         <title>Contact Our Recruitment Support Office | Future Wave</title>
@@ -141,11 +141,6 @@ const HeroContact = () => {
         </script>
       </Helmet>
 
-      <SvgBackground className="opacity-70" />
-
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/75 to-[#10131a]/20" />
-      <div className="absolute -left-28 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[150px]" />
-
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="relative w-full">
           <div
@@ -163,10 +158,10 @@ const HeroContact = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
             <div className="absolute bottom-8 right-8 max-w-sm rounded-[2rem] border border-white/10 bg-black/30 p-6 backdrop-blur-xl">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-300">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-lime-300">
                 Contact us
               </p>
-              <h3 className="mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8]">
+              <h3 className="mt-3 text-3xl font-semibold uppercase leading-none tracking-[-0.05em] text-[#f4f1e8]">
                 tell us what you need
               </h3>
             </div>
@@ -182,7 +177,7 @@ const HeroContact = () => {
               className="mb-7 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 backdrop-blur-md"
             >
               <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-[11px]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F6F5E8]/80 sm:text-[11px]">
                 Contact
               </p>
             </div>
@@ -192,8 +187,8 @@ const HeroContact = () => {
                 <div key={index} className="overflow-hidden pb-1">
                   <h1
                     ref={(el) => (titleRefs.current[index] = el)}
-                    className={`text-[3rem] font-black uppercase leading-[0.88] tracking-[-0.075em] sm:text-[4.5rem] md:text-[5.5rem] xl:text-[6.5rem] ${
-                      index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                    className={`text-[3rem] font-semibold uppercase leading-[0.88] tracking-[-0.04em] sm:text-[4.5rem] md:text-[5.5rem] xl:text-[5rem] ${
+                      index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                     }`}
                   >
                     {line}
@@ -204,7 +199,7 @@ const HeroContact = () => {
 
             <p
               ref={textRef}
-              className="mt-8 max-w-md text-base leading-8 text-white/72 md:text-lg"
+              className="mt-8 max-w-md text-base leading-8 text-[#F6F5E8]/72 font-montserrat md:text-lg"
             >
               Have a question, hiring need or partnership idea? Send us a
               message and our team will respond as soon as possible.
@@ -222,7 +217,7 @@ const HeroContact = () => {
                 <h4 className="text-base font-bold uppercase tracking-wide md:text-lg">
                   Send a message
                 </h4>
-                <p className="mt-1 text-sm text-white/50">
+                <p className="mt-1 text-sm text-[#F6F5E8]/50 font-montserrat">
                   We usually reply quickly
                 </p>
               </div>

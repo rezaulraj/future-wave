@@ -166,9 +166,8 @@ const OurProcess = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-
       <div className="container relative z-10 mx-auto">
         <div className="mx-auto mb-20 max-w-5xl text-center">
           <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-lime-300">

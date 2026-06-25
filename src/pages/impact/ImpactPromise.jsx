@@ -60,7 +60,7 @@ const ImpactPromise = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323D]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
       <div className="container relative z-10 mx-auto">
         <div className="mx-auto max-w-4xl text-center">

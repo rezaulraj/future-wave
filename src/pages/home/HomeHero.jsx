@@ -171,7 +171,7 @@ const HomeHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden font-archivo bg-[#31323D] text-[#F6F5E8]"
+      className="relative min-h-screen overflow-hidden font-arimo bg-[#31323d]/95 text-[#F6F5E8]"
     >
       <Helmet>
         <title>
@@ -221,8 +221,6 @@ const HomeHero = () => {
         </script>
       </Helmet>
 
-      <SvgBackground className="opacity-100" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/95 to-[#31323D]/90" />
 
       <div className="relative z-10 px-5 pt-28 md:px-14 lg:pt-36">
         <div className="container mx-auto flex min-h-[calc(100vh-220px)] items-center">
@@ -237,7 +235,7 @@ const HomeHero = () => {
                 alt="future wave cover"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/55 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#1b1b22] via-[#31323D]/55 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             </div>
 
@@ -249,7 +247,7 @@ const HomeHero = () => {
                 <span className="grid h-6 w-6 place-items-center rounded-full border border-lime-500 text-[#F6F5E8]">
                   ↗
                 </span>
-                <p className="text-[10px] font-normal uppercase tracking-[0.20em] text-[#F6F5E8] sm:text-[0.9rem]">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.20em] text-[#F6F5E8] sm:text-[0.9rem]">
                   Recruitment for essential workforce pioneers
                 </p>
               </div>
@@ -259,7 +257,7 @@ const HomeHero = () => {
                   <div key={i} className="overflow-hidden pb-1">
                     <h1
                       ref={(el) => (linesRef.current[i] = el)}
-                      className={`text-[2.55rem] font-medium uppercase font-arimo leading-[1] tracking-[-0.01em] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[4.5rem] ${
+                      className={`text-[2.55rem] font-semibold uppercase font-arimo leading-[1] tracking-[-0.01em] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[4.5rem] ${
                         i === 2 ? "text-lime-300" : "text-[#F6F5E8]"
                       }`}
                     >

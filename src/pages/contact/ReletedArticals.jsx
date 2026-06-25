@@ -109,18 +109,17 @@ const ReletedArticals = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
       <div className="container relative z-10 mx-auto">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          {/* left side */}
           <div>
             <div
               ref={(el) => (titleRefs.current[0] = el)}
               className="mb-6 flex w-fit items-center gap-3 rounded-full border border-lime-300/20 bg-lime-300/10 px-5 py-2 backdrop-blur-xl"
             >
               <FiBookOpen className="text-lime-300" />
-              <p className="text-[10px] font-black uppercase tracking-[0.24em] text-lime-300">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-lime-300">
                 Related Articles
               </p>
             </div>
@@ -128,7 +127,7 @@ const ReletedArticals = () => {
             <div className="overflow-hidden pb-2">
               <h2
                 ref={(el) => (titleRefs.current[1] = el)}
-                className="text-4xl font-black leading-[0.92] tracking-[-0.06em] text-[#f4f1e8] md:text-6xl"
+                className="text-4xl font-semibold leading-[0.92] tracking-[-0.06em] text-[#F6F5E8] md:text-6xl"
               >
                 Find out more before{" "}
                 <span className="text-lime-300">you contact us</span>
@@ -137,7 +136,7 @@ const ReletedArticals = () => {
 
             <p
               ref={(el) => (titleRefs.current[2] = el)}
-              className="mt-6 max-w-xl text-base leading-8 text-white/58"
+              className="mt-6 max-w-xl text-base leading-8 text-[#F6F5E8]/68 font-montserrat"
             >
               Read helpful recruitment guides, work permit information and
               employer insights before starting your hiring process.
@@ -152,24 +151,23 @@ const ReletedArticals = () => {
               </div>
 
               <div>
-                <p className="text-sm font-black uppercase tracking-[0.18em] text-lime-300">
+                <p className="text-sm font-semibold font-montserrat uppercase tracking-[0.18em] text-lime-300">
                   Recruitment Insights
                 </p>
-                <p className="mt-1 text-sm text-white/50">
+                <p className="mt-1 text-sm text-white/50 font-montserrat">
                   Updated articles for employers and partners.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* right side */}
           <div className="space-y-5">
             {articles.map((article, index) => (
               <Link
                 key={index}
                 to={`/communities-resources/${article.slug}`}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className="group relative flex overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1 hover:border-lime-300/35 hover:bg-white/[0.06]"
+                className="group relative flex overflow-hidden rounded-[2rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.045] p-6 shadow-[0_25px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 hover:-translate-y-1 hover:border-lime-300/35 hover:bg-[#F6F5E8]/[0.06]"
               >
                 <div className="absolute -right-10 top-1/2 h-28 w-28 -translate-y-1/2 rounded-full bg-lime-300/10 blur-3xl transition-all duration-500 group-hover:bg-lime-300/20" />
 
@@ -180,7 +178,7 @@ const ReletedArticals = () => {
 
                   <div className="flex-1">
                     <div className="mb-3 flex flex-wrap items-center gap-3">
-                      <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-white/55">
+                      <span className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
                         {article.category}
                       </span>
 
@@ -190,7 +188,7 @@ const ReletedArticals = () => {
                       </span>
                     </div>
 
-                    <h3 className="max-w-2xl text-lg font-black leading-8 tracking-[-0.03em] text-[#f4f1e8] transition-all duration-500 group-hover:text-lime-300 md:text-xl">
+                    <h3 className="max-w-2xl text-lg font-semibold leading-8 tracking-[-0.03em] text-[#f4f1e8] transition-all duration-500 group-hover:text-lime-300 md:text-xl">
                       {article.title}
                     </h3>
                   </div>
@@ -225,7 +223,7 @@ const ReletedArticals = () => {
                   key={index}
                   to={item.path}
                   ref={(el) => (linkRefs.current[index] = el)}
-                  className="group flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] text-white/55 transition-all duration-500 hover:text-lime-300"
+                  className="group flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-white/55 transition-all duration-500 hover:text-lime-300"
                 >
                   <span>{item.label}</span>
 

@@ -57,6 +57,7 @@ const AboutUs = () => {
 
   return (
     <main className="relative min-h-screen overflow-hidden md:overflow-visible bg-[#31323D] text-[#F6F5E8]">
+      <SvgBackground className="opacity-100 fixed" />
       <div className="relative z-10">
         <section
           ref={(el) => (sectionRefs.current[0] = el)}

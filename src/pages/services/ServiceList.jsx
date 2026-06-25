@@ -188,7 +188,7 @@ const ServiceList = () => {
     <section
       ref={sectionRef}
       id="service-list"
-      className="relative overflow-visible px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
+      className="relative overflow-visible px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
       <div
         ref={previewRef}
@@ -204,7 +204,7 @@ const ServiceList = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#31323d]/85 via-[#31323d]/15 to-transparent" />
           <p
             ref={previewTitleRef}
-            className="absolute bottom-4 left-4 right-4 text-sm font-black uppercase tracking-[0.15em] text-lime-300"
+            className="absolute bottom-4 left-4 right-4 text-sm font-semibold uppercase tracking-[0.15em] text-lime-300"
           >
             {activePreview.title}
           </p>
@@ -212,11 +212,11 @@ const ServiceList = () => {
       </div>
 
       <div className="container relative z-10 mx-auto">
-        <div className="mb-12 max-w-3xl">
+        <div className="mb-12 max-w-4xl">
           <p className="mb-4 text-[11px] font-black uppercase tracking-[0.25em] text-lime-300">
             Services
           </p>
-          <h2 className="text-4xl font-black uppercase tracking-[-0.05em] text-[#f4f1e8] md:text-6xl">
+          <h2 className="text-4xl font-semibold uppercase tracking-[-0.02em] text-[#f4f1e8] md:text-6xl">
             Flexible hiring support
           </h2>
         </div>
@@ -236,13 +236,13 @@ const ServiceList = () => {
                 className="relative flex w-full items-start justify-between gap-6 px-6 py-8 text-left transition-all duration-500 hover:bg-white/[0.055] md:px-10"
               >
                 <div>
-                  <h3 className="text-2xl font-black uppercase tracking-[-0.04em] text-[#f4f1e8] md:text-3xl">
+                  <h3 className="text-2xl font-semibold uppercase tracking-[-0.04em] text-[#F6F5E8] md:text-3xl">
                     <span className="text-lime-300">{item.number}</span>
                     <span className="mx-2 text-white/35">/</span>
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 max-w-2xl text-sm leading-7 text-white/65">
+                  <p className="mt-4 max-w-2xl text-sm leading-7 font-montserrat text-[#F6F5E8]/65">
                     {item.short}
                   </p>
                 </div>
@@ -270,7 +270,7 @@ const ServiceList = () => {
                           <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full border border-lime-300 text-[10px] text-lime-300">
                             ✓
                           </span>
-                          <p className="text-sm font-semibold leading-7 text-white/75">
+                          <p className="text-sm font-semibold leading-7 font-montserrat text-[#F6F5E8]/75">
                             {answer}
                           </p>
                         </div>

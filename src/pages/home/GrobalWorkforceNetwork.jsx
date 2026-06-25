@@ -141,7 +141,7 @@ const GrobalWorkforceNetwork = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
       {/* <div className="absolute left-[-120px] top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
       {/* <div className="absolute bottom-0 right-[-140px] h-[600px] w-[600px] rounded-full bg-cyan-400/10 blur-[180px]" /> */}

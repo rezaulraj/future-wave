@@ -108,7 +108,7 @@ const OurMission = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden font-arimo px-5 py-24 text-[#31323d] md:px-14 md:py-32"
+      className="relative overflow-hidden font-arimo px-5 py-24 bg-[#31323d]/95 text-[#F6F5E8] md:px-14 md:py-32"
     >
       {/* <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[160px]" />
       <div className="absolute right-0 bottom-0 h-[420px] w-[420px] rounded-full bg-violet-400/10 blur-[150px]" /> */}
