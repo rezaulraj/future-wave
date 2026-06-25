@@ -55,15 +55,15 @@ const renderMarqueeItems = (items, rowType) => {
       <span
         className={`h-2 w-2 rounded-full ${
           rowType === "lime"
-            ? "bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.95)]"
-            : "bg-cyan-300 shadow-[0_0_18px_rgba(103,232,249,0.95)]"
+            ? "bg-lime-400 shadow-[0_0_18px_rgba(190,242,100,0.95)]"
+            : "bg-cyan-400 shadow-[0_0_18px_rgba(103,232,249,0.95)]"
         }`}
       />
       <span
         className={`group relative overflow-hidden rounded-full border px-5 py-2.5 text-sm font-black backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:scale-105 ${
           rowType === "lime"
-            ? "border-lime-300/20 bg-lime-300/[0.06] text-white/75 hover:border-lime-300 hover:text-black"
-            : "border-cyan-300/20 bg-cyan-300/[0.06] text-white/75 hover:border-cyan-300 hover:text-black"
+            ? "border-lime-300/20 bg-lime-300/[0.06] text-[#F6F5E8] hover:border-lime-300 hover:text-gray-900"
+            : "border-cyan-300/20 bg-cyan-300/[0.06] text-[#F6F5E8] hover:border-cyan-300 hover:text-gray-900"
         }`}
       >
         <span
@@ -71,7 +71,7 @@ const renderMarqueeItems = (items, rowType) => {
             rowType === "lime" ? "bg-lime-300" : "bg-cyan-300"
           }`}
         />
-        <span className="relative z-10">{item}</span>
+        <span className="relative z-10 tracking-[0.08em]">{item}</span>
       </span>
     </div>
   ));
@@ -171,7 +171,7 @@ const HomeHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#151820] text-white"
+      className="relative min-h-screen overflow-hidden font-archivo bg-[#31323D] text-[#F6F5E8]"
     >
       <Helmet>
         <title>
@@ -222,16 +222,14 @@ const HomeHero = () => {
       </Helmet>
 
       <SvgBackground className="opacity-100" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/95 to-[#31323D]/90" />
 
-      {/* ── Hero Content ── */}
       <div className="relative z-10 px-5 pt-28 md:px-14 lg:pt-36">
         <div className="container mx-auto flex min-h-[calc(100vh-220px)] items-center">
           <div className="relative w-full">
-            {/* desktop image */}
             <div
               ref={imageBoxRef}
-              className="absolute right-0 top-1/2 hidden h-[70vh] w-[67%] -translate-y-1/2 overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 shadow-[0_35px_120px_rgba(0,0,0,0.55)] lg:block"
+              className="absolute right-0 top-1/2 hidden h-[70vh] w-[67%] -translate-y-1/2 overflow-hidden bg-[#31323D] shadow-[0_35px_120px_rgba(0,0,0,0.55)] lg:block"
             >
               <img
                 ref={imageRef}
@@ -239,20 +237,19 @@ const HomeHero = () => {
                 alt="future wave cover"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#151820] via-[#151820]/55 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/55 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             </div>
 
-            {/* text */}
-            <div className="relative z-20 max-w-4xl">
+            <div className="relative z-20 max-w-5xl">
               <div
                 ref={smallRef}
-                className="mb-7 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md"
+                className="mb-7 flex w-fit items-center gap-3"
               >
-                <span className="grid h-6 w-6 place-items-center rounded-full border border-lime-300 text-lime-300">
+                <span className="grid h-6 w-6 place-items-center rounded-full border border-lime-500 text-[#F6F5E8]">
                   ↗
                 </span>
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/80 sm:text-[11px]">
+                <p className="text-[10px] font-normal uppercase tracking-[0.20em] text-[#F6F5E8] sm:text-[0.9rem]">
                   Recruitment for essential workforce pioneers
                 </p>
               </div>
@@ -262,8 +259,8 @@ const HomeHero = () => {
                   <div key={i} className="overflow-hidden pb-1">
                     <h1
                       ref={(el) => (linesRef.current[i] = el)}
-                      className={`text-[2.55rem] font-black uppercase leading-[0.9] tracking-[-0.07em] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[5.7rem] ${
-                        i === 2 ? "text-lime-300" : "text-[#f4f1e8]"
+                      className={`text-[2.55rem] font-medium uppercase font-arimo leading-[1] tracking-[-0.01em] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[4.5rem] ${
+                        i === 2 ? "text-lime-300" : "text-[#F6F5E8]"
                       }`}
                     >
                       {line}
@@ -274,7 +271,7 @@ const HomeHero = () => {
 
               <p
                 ref={paraRef}
-                className="mt-7 max-w-md text-base leading-8 text-white/75 md:text-lg"
+                className="mt-7 max-w-md text-base font-montserrat leading-8 text-[#F6F5E8] md:text-xl font-normal"
               >
                 We help pioneering companies grow by reducing hiring stress and
                 connecting them with ready-to-work professionals.
@@ -285,10 +282,10 @@ const HomeHero = () => {
                   ↗
                 </button>
                 <div>
-                  <h4 className="text-base font-bold uppercase tracking-wide md:text-lg">
+                  <h4 className="text-base font-bold text-[#F6F5E8] uppercase tracking-wide md:text-lg">
                     Explore Opportunities
                   </h4>
-                  <p className="mt-1 text-sm text-white/50">
+                  <p className="mt-1 text-sm font-montserrat text-[#F6F5E8]/50">
                     Let's build a better future together
                   </p>
                 </div>

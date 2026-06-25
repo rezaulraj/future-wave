@@ -122,14 +122,14 @@ const Spatialitys = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-visible px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-visible px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
+      {/* <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
+      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       <div className="container relative z-10 mx-auto">
         <div className="mb-16 max-w-4xl">
-          <p className="mb-5 text-[11px] font-black uppercase tracking-[0.28em] text-lime-300">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-lime-300">
             Industry Specialties
           </p>
 
@@ -138,8 +138,8 @@ const Spatialitys = () => {
               <div key={index} className="overflow-hidden pb-1">
                 <h2
                   ref={(el) => (titleRefs.current[index] = el)}
-                  className={`text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.07em] sm:text-[4.5rem] md:text-[6rem] ${
-                    index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                  className={`text-[3rem] font-semibold uppercase leading-[0.9] tracking-[-0.07em] sm:text-[4.5rem] md:text-[5rem] ${
+                    index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                   }`}
                 >
                   {line}
@@ -148,7 +148,7 @@ const Spatialitys = () => {
             ),
           )}
 
-          <p className="mt-7 max-w-2xl text-base leading-8 text-white/65 md:text-lg">
+          <p className="mt-7 max-w-2xl text-base font-montserrat leading-8 text-[#F6F5E8]/75 md:text-lg">
             Explore the areas where we help employers find reliable, skilled and
             service-focused people.
           </p>
@@ -167,8 +167,8 @@ const Spatialitys = () => {
                   onMouseEnter={() => setActive(index)}
                   className={`group relative overflow-hidden rounded-[2.3rem] border p-4 backdrop-blur-2xl transition-all duration-700 ${
                     isActive
-                      ? "border-lime-300/60 bg-white/[0.085] shadow-[0_35px_120px_rgba(190,242,100,0.14)]"
-                      : "border-white/10 bg-white/[0.04] hover:border-lime-300/40 hover:bg-white/[0.07]"
+                      ? "border-lime-300/60 bg-[#F6F5E8] shadow-[0_35px_120px_rgba(190,242,100,0.14)]"
+                      : "border-white/10 bg-[#F6F5E8]/10 hover:border-lime-300/40 hover:bg-white/[0.07]"
                   }`}
                 >
                   <div className="grid gap-5 md:grid-cols-[0.75fr_1fr] md:items-center">
@@ -188,15 +188,15 @@ const Spatialitys = () => {
                     </div>
 
                     <div className="p-2 md:p-4">
-                      <p className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-300">
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#31323d]">
                         {item.subtitle}
                       </p>
 
-                      <h3 className="mt-4 text-3xl font-black uppercase leading-none tracking-[-0.055em] text-[#f4f1e8] md:text-4xl">
+                      <h3 className="mt-4 text-3xl font-semibold uppercase leading-none tracking-[-0.055em] text-[#31323d] md:text-4xl">
                         {item.title}
                       </h3>
 
-                      <p className="mt-5 max-w-xl text-sm leading-7 text-white/62">
+                      <p className="mt-5 max-w-xl font-montserrat text-sm leading-7 text-[#31323d]/85">
                         {item.text}
                       </p>
 
@@ -204,7 +204,7 @@ const Spatialitys = () => {
                         {item.roles.slice(0, 3).map((role, i) => (
                           <span
                             key={i}
-                            className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-xs font-bold text-white/65"
+                            className="rounded-full border border-[#31323d]/10 bg-[#31323d]/20 px-4 py-2 text-xs font-bold text-[#31323d]/85"
                           >
                             {role}
                           </span>
@@ -223,10 +223,9 @@ const Spatialitys = () => {
             })}
           </div>
 
-          {/* sticky active details circle */}
           <div className="sticky top-28 hidden lg:block self-start">
             <div className="relative mx-auto h-[520px] w-[520px]">
-              <div className="absolute inset-0 rounded-full border border-white/10 bg-white/[0.035] backdrop-blur-2xl" />
+              <div className="absolute inset-0 rounded-full border border-white/10 bg- backdrop-blur-2xl" />
               <div className="absolute inset-8 rounded-full border border-lime-300/20" />
               <div className="absolute inset-20 rounded-full border border-cyan-300/15" />
 
@@ -236,7 +235,7 @@ const Spatialitys = () => {
                   alt={industries[active].title}
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#31323d]/85 via-[#31323d]/30 to-transparent" />
               </div>
 
               <div

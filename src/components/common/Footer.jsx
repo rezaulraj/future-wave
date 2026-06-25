@@ -188,17 +188,20 @@ const Footer = () => {
   };
 
   return (
-    <footer ref={footerRef} className="relative overflow-hidden text-white">
-      <SvgBackground className="opacity-100" />
+    <footer
+      ref={footerRef}
+      className="relative overflow-hidden bg-[#31323D] text-[#F6F5E8] font-arimo"
+    >
+      <SvgBackground className="opacity-10" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
+      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" /> */}
 
       <div className="relative px-5 py-6 md:px-14">
         <div className="container relative z-10 mx-auto grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-end">
           <div className="flex flex-col gap-8">
             <div ref={logoRef}>
               <a href="/" className="group flex items-center gap-3">
-                <img src="/newlogo.png" alt="" className="h-24" />
+                <img src="/new-logo.png" alt="" className="h-14" />
               </a>
             </div>
 
@@ -230,9 +233,9 @@ const Footer = () => {
               <div
                 key={index}
                 ref={(el) => (infoRefs.current[index] = el)}
-                className="group rounded-[1.5rem] border border-white/10 bg-white/[0.045] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-white/[0.08]"
+                className="group rounded-[1.5rem] border border-white/10 bg-[#F6F5E8]/[0.045] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-[#F6F5E8]/[0.08]"
               >
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-300">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-lime-300">
                   {item.title}
                 </p>
                 <p className="mt-3 text-sm font-semibold tracking-wide text-white/75">
@@ -248,7 +251,6 @@ const Footer = () => {
         ref={marqueeRef}
         className="group/marquee relative z-10 overflow-hiddenpy-6 py-2 backdrop-blur-sm"
       >
-
         <div className="footer-marquee footer-marquee-left mb-4 flex w-max items-center">
           {renderMarquee(rowOne, "lime")}
         </div>
@@ -260,14 +262,14 @@ const Footer = () => {
 
       <div
         ref={bottomRef}
-        className="relative z-10 bg-[#f4f1e8] px-5 py-7 text-[#30313c] md:px-14"
+        className="relative z-10 bg-[#F6F5E8] px-5 py-7 text-[#31323d] md:px-14"
       >
         <div className="container mx-auto flex flex-col justify-between gap-4 text-sm md:flex-row md:items-center">
-          <p className="text-lg font-light">
+          <p className="text-lg font-montserrat font-light">
             This page loaded in 1.4s, emitting ~0.090g of CO₂e.
           </p>
 
-          <p className="text-xs font-bold uppercase tracking-[0.2em]">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] ">
             Website design by Future Wave Recruitment / Development by Tempest
           </p>
         </div>

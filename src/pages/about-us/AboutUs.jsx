@@ -56,11 +56,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden md:overflow-visible bg-[#151820] text-[#f4f1e8]">
-      <div className="fixed left-[-160px] top-[15%] z-[1] h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[160px]" />
-
-      <div className="fixed right-[-180px] top-[45%] z-[1] h-[600px] w-[600px] rounded-full bg-cyan-400/10 blur-[180px]" />
-
+    <main className="relative min-h-screen overflow-hidden md:overflow-visible bg-[#31323D] text-[#F6F5E8]">
       <div className="relative z-10">
         <section
           ref={(el) => (sectionRefs.current[0] = el)}

@@ -122,7 +122,7 @@ const HeroLivejob = () => {
     },
   ];
 
-  const title = ["LIVE JOBS", "FOR MISSION", "BUILDERS"];
+  const title = ["LIVE JOBS FOR MISSION", "", "BUILDERS"];
 
   const schemaOrgJobBoardData = {
     "@context": "https://schema.org",
@@ -146,7 +146,7 @@ const HeroLivejob = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#151820] px-5 py-28 text-white md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
     >
       <Helmet>
         <title>Live Job Openings | Hospitality, Logistics & Salon Roles</title>
@@ -187,17 +187,15 @@ const HeroLivejob = () => {
         </script>
       </Helmet>
 
-      <SvgBackground className="opacity-65" />
+      <SvgBackground className="opacity-10" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/72 to-[#10131a]/20" />
-      <div className="absolute -left-28 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[150px]" />
-      <div className="absolute -right-32 bottom-10 h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/95 to-[#31323D]/90" />
 
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="relative w-full">
           <div
             ref={imageBoxRef}
-            className="absolute right-0 top-1/2 hidden h-[72vh] w-[67%] -translate-y-1/2 overflow-hidden rounded-[2.7rem] border border-white/10 bg-white/[0.05] shadow-[0_35px_120px_rgba(0,0,0,0.6)] backdrop-blur-xl lg:block"
+            className="absolute right-0 top-1/2 hidden h-[72vh] w-[67%] -translate-y-1/2 overflow-hidden lg:block"
           >
             <img
               ref={imageRef}
@@ -210,15 +208,15 @@ const HeroLivejob = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
             <div className="absolute bottom-8 right-8 max-w-sm rounded-[2rem] border border-white/10 bg-black/30 p-6 backdrop-blur-xl">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-300">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-lime-300">
                 Open Roles
               </p>
-              <h3 className="mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8]">
+              <h3 className="mt-3 text-3xl font-semibold uppercase leading-none tracking-[-0.05em] text-[#F6F5E8]">
                 join teams building tomorrow
               </h3>
             </div>
 
-            <div className="absolute right-8 top-8 grid h-16 w-16 place-items-center rounded-full border border-lime-300 bg-black/30 text-3xl text-lime-300 backdrop-blur-xl">
+            <div className="absolute right-8 top-8 grid h-16 w-16 place-items-center rounded-full border border-lime-300 bg-[#31323d]/30 text-3xl text-lime-300 backdrop-blur-xl">
               ↗
             </div>
           </div>
@@ -226,23 +224,23 @@ const HeroLivejob = () => {
           <div className="relative z-20 max-w-4xl">
             <div
               ref={badgeRef}
-              className="mb-7 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 backdrop-blur-md"
+              className="mb-7 flex w-fit items-center gap-3 rounded-full border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.05] px-4 py-2 backdrop-blur-md"
             >
               <span className="grid h-6 w-6 place-items-center rounded-full border border-lime-300 text-lime-300">
                 ◌
               </span>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-[11px]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F6F5E8]/80 sm:text-[11px]">
                 Current Opportunities
               </p>
             </div>
 
-            <div className="space-y-1">
+            <div className="space-y-2">
               {title.map((line, index) => (
                 <div key={index} className="overflow-hidden pb-1">
                   <h1
                     ref={(el) => (titleRefs.current[index] = el)}
-                    className={`text-[3.1rem] font-black uppercase leading-[0.88] tracking-[-0.075em] sm:text-[4.5rem] md:text-[5.5rem] xl:text-[6.5rem] ${
-                      index === 2 ? "text-lime-300" : "text-[#f4f1e8]"
+                    className={`text-[3.1rem] font-semibold uppercase leading-[0.88] tracking-[-0.05em] sm:text-[4rem] md:text-[4.5rem] xl:text-[5rem] ${
+                      index === 2 ? "text-lime-300" : "text-[#F6F5E8]"
                     }`}
                   >
                     {line}
@@ -253,7 +251,7 @@ const HeroLivejob = () => {
 
             <p
               ref={textRef}
-              className="mt-8 max-w-md text-base leading-8 text-white/72 md:text-lg"
+              className="mt-8 max-w-md text-base leading-8 text-[#F6F5E8]/72 font-montserrat md:text-lg"
             >
               Find meaningful roles with companies aligned to your values,
               purpose and future.
@@ -268,12 +266,12 @@ const HeroLivejob = () => {
                 <div
                   key={index}
                   ref={(el) => (cardRefs.current[index] = el)}
-                  className="rounded-[1.4rem] border border-white/10 bg-white/[0.055] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-white/[0.09]"
+                  className="rounded-[1.4rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.055] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-[#F6F5E8]/[0.09]"
                 >
-                  <h3 className="text-2xl font-black text-lime-300">
+                  <h3 className="text-2xl font-semibold text-lime-300">
                     {item.value}
                   </h3>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">
+                  <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F6F5E8]/50">
                     {item.label}
                   </p>
                 </div>

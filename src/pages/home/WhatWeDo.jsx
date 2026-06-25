@@ -144,10 +144,10 @@ const WhatWeDo = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 text-[#F6F5E8] md:px-14 md:py-32"
     >
-      <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
-      <div className="absolute bottom-10 right-0 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[160px]" />
+      {/* <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
+      <div className="absolute bottom-10 right-0 h-[500px] w-[500px] rounded-full bg-cyan-400/10 blur-[160px]" /> */}
 
       <div className="container relative z-10 mx-auto">
         <div className="mb-16 max-w-5xl">
@@ -156,7 +156,7 @@ const WhatWeDo = () => {
             className="mb-6 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
           >
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-white/75">
+            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#F6F5E8]/75">
               What We Do
             </p>
           </div>
@@ -166,7 +166,7 @@ const WhatWeDo = () => {
               <div key={index} className="overflow-hidden pb-1">
                 <h2
                   ref={(el) => (titleRefs.current[index] = el)}
-                  className="text-[2.3rem] font-black uppercase leading-[0.95] tracking-[-0.055em] text-[#f4f1e8] sm:text-[3.6rem] md:text-[4.8rem] xl:text-[5.5rem]"
+                  className="text-[2.3rem] font-semibold uppercase leading-[0.95] tracking-[-0.055em] text-[#F6F5E8] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[5rem]"
                 >
                   {line}
                 </h2>
@@ -176,7 +176,7 @@ const WhatWeDo = () => {
 
           <p
             ref={descRef}
-            className="mt-8 max-w-2xl text-base leading-8 text-white/70 md:text-lg"
+            className="mt-8 max-w-2xl text-base leading-8 font-montserrat text-[#F6F5E8]/70 md:text-lg"
           >
             We help you build happy, productive and mission-aligned teams by
             finding people who not only love what they do, but love why they do
@@ -184,7 +184,7 @@ const WhatWeDo = () => {
           </p>
         </div>
 
-        <div className="relative rounded-[2.5rem] border border-white/10 bg-white/[0.055] p-4 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:p-6">
+        <div className="relative rounded-[2.5rem] border border-[#F6F5E8]/10 bg-[#F6F5E8] p-4 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl md:p-6">
           <div className="absolute -left-16 -top-16 h-56 w-56 rounded-full bg-lime-300/15 blur-[80px]" />
           <div className="absolute -right-16 -bottom-16 h-64 w-64 rounded-full bg-violet-400/15 blur-[90px]" />
 
@@ -195,33 +195,34 @@ const WhatWeDo = () => {
                 ref={(el) => (cardRefs.current[index] = el)}
                 onMouseEnter={() => showPopup(index)}
                 onMouseLeave={() => hidePopup(index)}
-                className="group relative min-h-[360px] overflow-visible rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-lime-300/50 hover:bg-white/[0.085] hover:shadow-[0_30px_90px_rgba(190,242,100,0.12)]"
+                className="group relative min-h-[360px] overflow-visible rounded-[2rem] border border-[#31323d]/10 bg-[#F6F5E8]/5 p-7 backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-lime-300/50 hover:bg-white/[0.085] hover:shadow-[0_30px_90px_rgba(190,242,100,0.12)]"
               >
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100" />
 
-                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-black/20 text-2xl text-lime-300 shadow-inner">
+                <div className="mb-10 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-[#31323d]/20 text-2xl text-[#31323d] shadow-inner">
                   {item.icon}
                 </div>
 
-                <h3 className="max-w-xs text-3xl font-black leading-[0.95] tracking-[-0.04em] text-[#f4f1e8]">
+                <h3 className="max-w-xs text-3xl font-semibold leading-[0.95] text-[#31323d]">
                   {item.title}
                 </h3>
 
-                <div className="my-7 h-px w-full bg-gradient-to-r from-white/20 via-white/10 to-transparent" />
+                <div className="my-7 h-px w-full bg-gradient-to-r from-[#31323D]/50 via-[#F6F5E8]/10 to-transparent" />
 
-                <p className="text-sm leading-7 text-white/60">{item.text}</p>
+                <p className="text-sm leading-7 font-montserrat text-[#31323d]/85">
+                  {item.text}
+                </p>
 
-                <div className="absolute bottom-7 left-7 flex items-center gap-3 text-xs font-black uppercase tracking-[0.18em] text-lime-300 opacity-0 transition-all duration-500 group-hover:opacity-100">
+                <div className="absolute bottom-7 left-7 flex items-center gap-3 text-xs font-black uppercase tracking-[0.18em] text-[#31323d] opacity-0 transition-all duration-500 group-hover:opacity-100">
                   Explore
-                  <span className="grid h-8 w-8 place-items-center rounded-full border border-lime-300">
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-[#31323d]">
                     ↗
                   </span>
                 </div>
 
-                {/* popup image */}
                 <div
                   ref={(el) => (popupRefs.current[index] = el)}
-                  className={`pointer-events-none absolute z-30 hidden w-64 overflow-hidden rounded-[1.5rem] border border-white/15 bg-black/30 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-xl md:block ${
+                  className={`pointer-events-none absolute z-30 hidden w-64 overflow-hidden rounded-[1.5rem] border border-[#F6F5E8]/15 bg-black/30 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.6)] backdrop-blur-xl md:block ${
                     index === 0
                       ? "-right-16 -top-20"
                       : index === 1
@@ -235,7 +236,7 @@ const WhatWeDo = () => {
                     className="h-40 w-full rounded-[1.1rem] object-cover"
                   />
                   <div className="p-3">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-lime-300">
+                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#31323d]">
                       {item.title}
                     </p>
                   </div>
@@ -247,7 +248,7 @@ const WhatWeDo = () => {
           <div className="relative z-10 mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="/services"
-              className="group relative overflow-hidden rounded-full border border-lime-300 px-7 py-4 text-xs font-black uppercase tracking-[0.18em] text-lime-300 transition-all duration-500 hover:scale-105 hover:text-black"
+              className="group relative overflow-hidden rounded-full border border-[#31323d] px-7 py-4 text-xs font-black uppercase tracking-[0.18em] text-[#31323d] transition-all duration-500 hover:scale-105 hover:text-black"
             >
               <span className="absolute inset-0 -translate-x-full bg-lime-300 transition-transform duration-500 group-hover:translate-x-0" />
               <span className="relative z-10">Our Services</span>
@@ -257,7 +258,7 @@ const WhatWeDo = () => {
               onClick={() => {
                 setShowCalendly(true);
               }}
-              className="rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-xs font-black uppercase tracking-[0.18em] text-white/80 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-white/40 hover:bg-white/[0.08]"
+              className="rounded-full border border-white/15 bg-white/[0.04] px-7 py-4 text-xs font-black uppercase tracking-[0.18em] text-[#F6F5E8]/80 backdrop-blur-xl transition-all duration-500 hover:scale-105 hover:border-white/40 hover:bg-white/[0.08]"
             >
               Speak To Us
             </button>

@@ -166,14 +166,12 @@ const OurProcess = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      {/* <div className="absolute -left-32 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
-      {/* <div className="absolute bottom-0 -right-32 h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       <div className="container relative z-10 mx-auto">
         <div className="mx-auto mb-20 max-w-5xl text-center">
-          <p className="mb-5 text-[11px] font-black uppercase tracking-[0.28em] text-lime-300">
+          <p className="mb-5 text-[11px] font-semibold uppercase tracking-[0.28em] text-lime-300">
             Our Process
           </p>
 
@@ -181,8 +179,8 @@ const OurProcess = () => {
             <div key={index} className="overflow-hidden pb-1">
               <h2
                 ref={(el) => (titleRefs.current[index] = el)}
-                className={`text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.07em] sm:text-[4.5rem] md:text-[6rem] ${
-                  index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                className={`text-[3rem] font-semibold uppercase leading-[0.9] tracking-[-0.05em] sm:text-[4rem] md:text-[5rem] ${
+                  index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                 }`}
               >
                 {line}
@@ -190,15 +188,14 @@ const OurProcess = () => {
             </div>
           ))}
 
-          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-white/65 md:text-lg">
+          <p className="mx-auto mt-7 max-w-2xl text-base leading-8 font-montserrat text-[#F6F5E8]/65 md:text-lg">
             A refined recruitment workflow designed to plan, attract, evaluate
             and onboard the right people with confidence.
           </p>
         </div>
 
         <div className="relative mx-auto max-w-6xl">
-          {/* center timeline */}
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-white/10 md:block" />
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-[#F6F5E8]/10 md:block" />
           <div
             ref={progressRef}
             className="absolute left-1/2 top-0 hidden h-full w-[3px] -translate-x-1/2 rounded-full bg-gradient-to-b from-lime-300 via-cyan-300 to-lime-300 shadow-[0_0_25px_rgba(190,242,100,0.45)] md:block"
@@ -229,18 +226,17 @@ const OurProcess = () => {
                         <h3 className="step-reveal mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8] md:text-4xl">
                           {step.title}
                         </h3>
-                        <p className="step-reveal mt-5 text-sm leading-7 text-white/62 md:ml-auto md:max-w-md">
+                        <p className="step-reveal mt-5 text-sm leading-7 text-[#F6F5E8]/62 md:ml-auto md:max-w-md">
                           {step.text}
                         </p>
                       </div>
                     )}
                   </div>
 
-                  {/* center dot */}
                   <div className="relative z-10 flex justify-start md:justify-center">
-                    <div className="group relative grid h-20 w-20 place-items-center rounded-full border border-lime-300/30 bg-[#151820] shadow-[0_0_45px_rgba(190,242,100,0.12)] backdrop-blur-xl transition-all duration-500 hover:scale-110 hover:border-lime-300">
-                      <div className="absolute inset-2 rounded-full border border-white/10" />
-                      <div className="grid h-12 w-12 place-items-center rounded-full bg-lime-300 text-2xl text-black shadow-[0_0_30px_rgba(190,242,100,0.45)]">
+                    <div className="group relative grid h-20 w-20 place-items-center rounded-full border border-lime-300/30 bg-[#31323d] shadow-[0_0_45px_rgba(190,242,100,0.12)] backdrop-blur-xl transition-all duration-500 hover:scale-110 hover:border-lime-300">
+                      <div className="absolute inset-2 rounded-full border border-[#F6F5E8]/10" />
+                      <div className="grid h-12 w-12 place-items-center rounded-full bg-lime-300 text-2xl text-[#31323d] shadow-[0_0_30px_rgba(190,242,100,0.45)]">
                         <Icon />
                       </div>
 
@@ -257,30 +253,28 @@ const OurProcess = () => {
                         <p className="step-reveal text-[10px] font-black uppercase tracking-[0.28em] text-lime-300">
                           {step.label}
                         </p>
-                        <h3 className="step-reveal mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8] md:text-4xl">
+                        <h3 className="step-reveal mt-3 text-3xl font-semibold uppercase leading-none tracking-[-0.05em] text-[#f4f1e8] md:text-4xl">
                           {step.title}
                         </h3>
-                        <p className="step-reveal mt-5 max-w-md text-sm leading-7 text-white/62">
+                        <p className="step-reveal mt-5 max-w-md text-sm leading-7 font-montserrat text-[#F6F5E8]/62">
                           {step.text}
                         </p>
                       </div>
                     )}
                   </div>
 
-                  {/* mobile text */}
                   <div className="md:hidden">
-                    <p className="step-reveal text-[10px] font-black uppercase tracking-[0.28em] text-lime-300">
+                    <p className="step-reveal text-[10px] font-semibold uppercase tracking-[0.28em] text-lime-300">
                       {step.label}
                     </p>
-                    <h3 className="step-reveal mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8]">
+                    <h3 className="step-reveal mt-3 text-3xl font-semibold uppercase leading-none tracking-[-0.05em] text-[#F6F5E8]">
                       {step.title}
                     </h3>
-                    <p className="step-reveal mt-5 text-sm leading-7 text-white/62">
+                    <p className="step-reveal mt-5 text-sm font-montserrat leading-7 text-[#F6F5E8]/62">
                       {step.text}
                     </p>
                   </div>
 
-                  {/* connector line */}
                   <div
                     className={`pointer-events-none absolute top-10 hidden h-px w-[calc(50%-45px)] bg-gradient-to-r md:block ${
                       isRight

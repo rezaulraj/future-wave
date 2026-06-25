@@ -146,16 +146,15 @@ const Resources = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white bg-[#151820] md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/95 to-[#31323D]/90" />
 
       <div className="container relative z-10 mx-auto">
         <div className="mb-14 max-w-5xl">
           <p
             ref={(el) => (titleRefs.current[0] = el)}
-            className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.24em] text-lime-300"
+            className="mb-5 w-fit rounded-full border border-lime-300/25 bg-lime-300/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-lime-300"
           >
             Resources
           </p>
@@ -163,7 +162,7 @@ const Resources = () => {
           <div className="overflow-hidden pb-1">
             <h2
               ref={(el) => (titleRefs.current[1] = el)}
-              className="text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.07em] text-[#f4f1e8] sm:text-[4.5rem] md:text-[6rem]"
+              className="text-[3rem] font-black uppercase leading-[0.9] tracking-[-0.07em] text-[#F6F5E8] sm:text-[4.5rem] md:text-[5rem]"
             >
               Built around <span className="text-lime-300">community</span>
             </h2>
@@ -171,7 +170,7 @@ const Resources = () => {
 
           <p
             ref={(el) => (titleRefs.current[2] = el)}
-            className="mt-7 max-w-2xl text-base leading-8 text-white/65 md:text-lg"
+            className="mt-7 max-w-2xl text-base leading-8 text-[#F6F5E8]/65 md:text-lg"
           >
             Explore how collaboration, shared knowledge and better opportunities
             help us support clients, candidates and partners.
@@ -181,7 +180,7 @@ const Resources = () => {
         <div className="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div
             ref={imageWrapRef}
-            className="sticky top-28 overflow-hidden rounded-[2.4rem] border border-white/10 bg-white/[0.045] p-4 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
+            className="sticky top-28 overflow-hidden rounded-[2.4rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.045] p-4 shadow-[0_35px_120px_rgba(0,0,0,0.45)] backdrop-blur-2xl"
           >
             <div className="relative h-[520px] overflow-hidden rounded-[2rem]">
               <img
@@ -191,8 +190,8 @@ const Resources = () => {
                 className="h-full w-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#10131a] via-[#10131a]/35 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/45 via-transparent to-[#10131a]/20" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#F6F5E8] via-[#F6F5E8]/35 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#F6F5E8]/45 via-transparent to-[#F6F5E8]/20" />
 
               <div className="absolute bottom-6 left-6 right-6 rounded-[2rem] border border-white/10 bg-black/35 p-6 backdrop-blur-2xl">
                 <div className="flex items-center gap-4">

@@ -96,15 +96,15 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed left-0 top-0 z-50 w-full px-5 py-4 md:px-12">
-        <nav className="mx-auto flex container items-center justify-between rounded-full border border-white/10 bg-gradient-to-r from-[#10131a]/85 via-[#10131a]/70 to-[#10131a]/20 px-5 py-3 shadow-2xl backdrop-blur-xl">
+      <header className="fixed bg-[#31323D] text-[#F6F5E8] font-arimo left-0 top-0 z-50 w-full px-5 py-4 md:px-12">
+        <nav className="mx-auto flex container items-center justify-between rounded-full border border-white/10 bg-gradient-to-r from-[#31323D]/85 via-[#31323D]/70 to-[#31323D]/20 px-5 py-3 shadow-2xl backdrop-blur-xl">
           <a href="/" className="group flex items-center gap-3">
-            <img src="/newlogo.png" alt="" className="h-20" />
+            <img src="/new-logo.png" alt="" className="h-14" />
           </a>
 
           <button
             onClick={() => (open ? closeMenu() : setOpen(true))}
-            className="group relative grid h-12 w-12 place-items-center rounded-full border border-white/15 bg-white/10 text-2xl text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white hover:text-[#211e25]"
+            className="group relative grid h-12 w-12 place-items-center rounded-full border border-[#F6F5E8]/15 bg-[#F6F5E8]/10 text-2xl text-[#F6F5E8] shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#F6F5E8] hover:text-[#211e25]"
           >
             {open ? <IoClose /> : <FiMenu />}
           </button>
@@ -114,16 +114,16 @@ const Header = () => {
       {open && (
         <section
           ref={menuRef}
-          className="fixed inset-0 z-40 overflow-hidden bg-[#0c0c0e]"
+          className="fixed inset-0 z-40 overflow-hidden bg-[#31323D]"
         >
-          <SvgBackground className="opacity-100" />
+          <SvgBackground className="opacity-10" />
 
           <div className="relative z-10 flex min-h-screen items-center px-6 pt-24 md:px-20">
             <div className="grid w-full grid-cols-1 gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
               <div>
-                <p className="mb-5 text-sm font-bold uppercase tracking-[0.5em] text-white/50">
+                {/* <p className="mb-5 text-sm font-semibold uppercase tracking-[0.5em] text-white/50">
                   Explore Menu
-                </p>
+                </p> */}
 
                 <ul className="space-y-3">
                   {navItems.map((item, index) => (
@@ -136,11 +136,11 @@ const Header = () => {
                         to={item.path}
                         onClick={closeMenu}
                         className={({ isActive }) =>
-                          `relative block text-4xl font-bold transition-all duration-500 md:text-[3.5rem]
+                          `relative block text-4xl font-semibold transition-all duration-500 md:text-[3.5rem]
           ${
             isActive
               ? "translate-x-5 text-lime-300"
-              : "text-white/80 group-hover:translate-x-5 group-hover:text-white"
+              : "text-[#F6F5E8]/80 group-hover:translate-x-5 group-hover:text-[#F6F5E8]"
           }`
                         }
                       >
@@ -155,11 +155,11 @@ const Header = () => {
                 </ul>
               </div>
 
-              <div className="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur-xl md:p-8">
-                <h3 className="mb-4 text-2xl font-bold text-white">
+              <div className="rounded-[2rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/10 p-6 shadow-2xl backdrop-blur-xl md:p-8">
+                <h3 className="mb-4 text-2xl font-bold text-[#F6F5E8]">
                   Ready to grow?
                 </h3>
-                <p className="mb-7 text-white/60">
+                <p className="mb-7 text-[#F6F5E8]/70">
                   Connect with us and explore services, impact, live jobs and
                   resources in a beautiful way.
                 </p>
@@ -169,7 +169,7 @@ const Header = () => {
                     onClick={() => {
                       setShowContactForm(true);
                     }}
-                    className="group relative w-full text-center bg-lime-100 overflow-hidden rounded-full border border-lime-300 px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-lime-900 transition-all duration-500 hover:scale-105 hover:text-black"
+                    className="group relative w-full text-center bg-lime-100 overflow-hidden rounded-full border border-lime-300 px-7 py-4 text-sm font-black uppercase tracking-[0.18em] text-lime-900 transition-all duration-500 hover:scale-105 hover:text-[#31323d]"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-lime-300 transition-transform duration-500 group-hover:translate-x-0" />
                     <span className="relative z-10">Schedule a call</span>
@@ -178,7 +178,7 @@ const Header = () => {
                   <a
                     ref={(el) => (btnRefs.current[1] = el)}
                     href="mailto:hello@example.com"
-                    className="rounded-full border border-white/20 bg-white/10 px-7 py-4 text-center font-bold text-white shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#211e25]"
+                    className="rounded-full border border-[#F6F5E8]/20 bg-[#F6F5E8]/10 px-7 py-4 text-center font-bold text-[#F6F5E8] shadow-xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:bg-[#F6F5E8] hover:text-[#211e25]"
                   >
                     Email us
                   </a>

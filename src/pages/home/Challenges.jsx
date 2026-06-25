@@ -210,9 +210,9 @@ const Challenges = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-visible bg-[#151820] px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-visible font-archivo bg-[#31323D] px-5 py-24 text-white md:px-14 md:py-32"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D]/95 via-[#31323D]/70 to-[#31323D]/20" />
       <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
 
       {/* floating video preview */}
@@ -246,10 +246,10 @@ const Challenges = () => {
         <div className="mx-auto max-w-4xl text-center">
           <div
             ref={badgeRef}
-            className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-lime-300/25 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
+            className="mx-auto mb-6 flex w-fit items-center gap-2 rounded-full border border-lime-300/25 bg-white/[0.04] px-4 py-2 font-arimo backdrop-blur-xl "
           >
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-white/75">
+            <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#F6F5E8]/80">
               Is it familiar to you?
             </p>
           </div>
@@ -258,7 +258,7 @@ const Challenges = () => {
             <div key={index} className="inline-block overflow-hidden pb-1">
               <h2
                 ref={(el) => (titleRefs.current[index] = el)}
-                className="inline text-4xl font-black tracking-[-0.06em] text-[#f4f1e8] md:text-6xl"
+                className="inline text-4xl font-normal font-arimo tracking-[-0.06em] text-[#F6F5E8] md:text-6xl"
               >
                 {index === 1 ? (
                   <span className="text-lime-300"> {line}</span>
@@ -269,7 +269,10 @@ const Challenges = () => {
             </div>
           ))}
 
-          <p ref={textRef} className="mt-5 text-sm text-white/45 md:text-base">
+          <p
+            ref={textRef}
+            className="mt-5 text-sm font-montserrat text-[#F6F5E8]/75 md:text-base"
+          >
             Problems we solve every day for employers and growing teams.
           </p>
         </div>
@@ -285,37 +288,37 @@ const Challenges = () => {
                 onMouseEnter={(e) => showPreview(item, e, index)}
                 onMouseMove={movePreview}
                 onMouseLeave={() => hidePreview(index)}
-                className="group relative overflow-visible rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-2xl transition-all duration-500 hover:border-lime-300/50 hover:bg-white/[0.075] hover:shadow-[0_25px_100px_rgba(190,242,100,0.12)]"
+                className="group relative overflow-visible rounded-[1.7rem] border border-[#F6F5E8]/10 bg-[#F6F5E8] p-7 backdrop-blur-2xl transition-all duration-500 hover:border-lime-300/50 hover:bg-[#F6F5E8]/90 hover:shadow-[0_25px_100px_rgba(190,242,100,0.12)]"
               >
-                <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-lime-300/70 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-lime-300 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100" />
 
                 <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-lime-300/10 blur-3xl transition-all duration-500 group-hover:bg-lime-300/20" />
 
                 <div className="mb-6 flex items-center justify-between">
-                  <span className="text-[11px] font-black tracking-[0.25em] text-lime-300/80">
+                  <span className="text-[11px] font-black tracking-[0.25em] text-[#31323d]">
                     {item.no}
                   </span>
 
-                  <div className="grid h-12 w-12 place-items-center rounded-2xl border border-lime-300/20 bg-lime-300/10 text-lime-300 transition-all duration-500 group-hover:rotate-6 group-hover:bg-lime-300 group-hover:text-black">
+                  <div className="grid h-12 w-12 place-items-center rounded-2xl border border-lime-300/20 bg-[#31323d]/10 text-[#31323d] transition-all duration-500 group-hover:rotate-6 group-hover:bg-lime-300 group-hover:text-black">
                     <Icon />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-black text-[#f4f1e8]">
+                <h3 className="text-xl md:text-2xl font-semibold text-[#31323d] font-arimo">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 max-w-xl text-sm leading-7 text-white/55">
+                <p className="mt-4 max-w-xl text-sm leading-7 font-montserrat text-[#31323d]/95">
                   {item.text}
                 </p>
 
-                <div className="my-6 h-px w-full bg-gradient-to-r from-white/15 to-transparent" />
+                <div className="my-6 h-px w-full bg-gradient-to-r from-[#31323d]/15 to-transparent" />
 
                 <div className="flex items-end gap-3">
-                  <h4 className="text-3xl font-black text-white">
+                  <h4 className="text-3xl font-black text-[#31323d]">
                     {item.stat}
                   </h4>
-                  <p className="pb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white/35">
+                  <p className="pb-1 text-[10px] font-arimo font-semibold uppercase tracking-[0.16em] text-[#31323d]">
                     {item.label}
                   </p>
                 </div>
@@ -326,23 +329,23 @@ const Challenges = () => {
 
         <div
           ref={ctaRef}
-          className="mx-auto mt-14 overflow-hidden rounded-[2rem] border border-lime-300/30 bg-white/[0.055] p-7 shadow-[0_30px_100px_rgba(190,242,100,0.10)] backdrop-blur-2xl"
+          className="mx-auto mt-14 overflow-hidden rounded-[2rem] border border-[#31323d]/30 bg-[#F6F5E8] p-7 shadow-[0_30px_100px_rgba(190,242,100,0.10)] backdrop-blur-2xl"
         >
           <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.22em] text-lime-300">
+              <p className="text-[11px] font-semibold uppercase font-arimo tracking-[0.22em] text-[#31323d]">
                 One partner. Less stress. Better hiring.
               </p>
-              <h3 className="mt-3 max-w-3xl text-2xl font-black tracking-[-0.04em] text-[#f4f1e8] md:text-4xl">
+              <h3 className="mt-3 max-w-3xl text-2xl font-black tracking-[-0.04em] font-arimo text-[#31323d] md:text-4xl">
                 We handle the hiring complexity, so your team can stay focused.
               </h3>
             </div>
 
             <a
               href="/contact"
-              className="group relative w-fit overflow-hidden rounded-full border border-lime-300 px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-lime-300 transition-all duration-500 hover:scale-105 hover:text-black"
+              className="group relative w-fit overflow-hidden rounded-full border border-[#31323d] px-7 py-4 text-xs font-black uppercase tracking-[0.16em] text-[#31323d] transition-all duration-500 hover:scale-105 hover:text-black font-arimo"
             >
-              <span className="absolute inset-0 -translate-x-full bg-lime-300 transition-transform duration-500 group-hover:translate-x-0" />
+              <span className="absolute inset-0 -translate-x-full bg-lime-300 transition-transform duration-500 group-hover:translate-x-0 " />
               <span className="relative z-10">
                 Request an estimate <span className="ml-2">↗</span>
               </span>

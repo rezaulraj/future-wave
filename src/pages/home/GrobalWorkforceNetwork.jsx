@@ -141,7 +141,7 @@ const GrobalWorkforceNetwork = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
       {/* <div className="absolute left-[-120px] top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
       {/* <div className="absolute bottom-0 right-[-140px] h-[600px] w-[600px] rounded-full bg-cyan-400/10 blur-[180px]" /> */}
@@ -153,7 +153,7 @@ const GrobalWorkforceNetwork = () => {
             className="mx-auto mb-6 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
           >
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-white/75">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#F6F5E8]/75">
               Global Workforce Network
             </p>
           </div>
@@ -161,7 +161,7 @@ const GrobalWorkforceNetwork = () => {
           <div className="overflow-hidden pb-2">
             <h2
               ref={(el) => (titleRefs.current[1] = el)}
-              className="text-[3rem] font-black leading-[0.92] tracking-[-0.07em] text-[#f4f1e8] sm:text-[4.5rem] md:text-[6rem]"
+              className="text-[3rem] font-semibold leading-[0.92] tracking-[-0.07em] text-[#F6F5E8] sm:text-[4.5rem] md:text-[5rem]"
             >
               People from across{" "}
               <span className="text-lime-300">Asia, Middle East</span> and
@@ -171,7 +171,7 @@ const GrobalWorkforceNetwork = () => {
 
           <p
             ref={(el) => (titleRefs.current[2] = el)}
-            className="mx-auto mt-7 max-w-3xl text-base leading-8 text-white/62 md:text-lg"
+            className="mx-auto mt-7 max-w-3xl text-base font-montserrat leading-8 text-[#F6F5E8]/62 md:text-lg"
           >
             We connect trusted employers with skilled candidates from India,
             Nepal, Sri Lanka, Pakistan, Bangladesh, Middle East partners and
@@ -192,7 +192,7 @@ const GrobalWorkforceNetwork = () => {
                 <h3 className="text-3xl font-black text-lime-300">
                   {stat.value}
                 </h3>
-                <p className="mt-2 text-[10px] font-black uppercase tracking-[0.18em] text-white/40">
+                <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#F6F5E8]/70">
                   {stat.label}
                 </p>
               </div>
@@ -202,10 +202,10 @@ const GrobalWorkforceNetwork = () => {
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-6">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.3em] text-lime-300">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-lime-300">
               Workforce regions
             </p>
-            <h3 className="mt-3 text-3xl font-black tracking-[-0.05em] text-[#f4f1e8] md:text-5xl">
+            <h3 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#F6F5E8] md:text-5xl">
               Strong partner coverage
             </h3>
           </div>
@@ -215,7 +215,7 @@ const GrobalWorkforceNetwork = () => {
             onClick={() => {
               setShowCalendly(true);
             }}
-            className="group flex items-center gap-3 rounded-full border border-lime-300/30 bg-lime-300/10 px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-lime-300 transition-all duration-500 hover:bg-lime-300 hover:text-black cursor-pointer" 
+            className="group flex items-center gap-3 rounded-full border border-lime-300/30 bg-lime-300/10 px-6 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-lime-300 transition-all duration-500 hover:bg-lime-300 hover:text-[#31323d] cursor-pointer"
           >
             Partner with us
             <FiArrowRight className="transition-all duration-500 group-hover:translate-x-1" />
@@ -227,7 +227,7 @@ const GrobalWorkforceNetwork = () => {
             <div
               key={country.name}
               ref={(el) => (cardRefs.current[index] = el)}
-              className="group relative h-[330px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] shadow-[0_25px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-700 hover:-translate-y-3 hover:border-lime-300/45 hover:shadow-[0_35px_120px_rgba(190,242,100,0.12)]"
+              className="group relative h-[330px] overflow-hidden rounded-[2rem] border border-white/10 bg-[#31323d]/[0.045] shadow-[0_25px_90px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-700 hover:-translate-y-3 hover:border-lime-300/45 hover:shadow-[0_35px_120px_rgba(190,242,100,0.12)]"
             >
               <img
                 src={country.image}
@@ -247,12 +247,12 @@ const GrobalWorkforceNetwork = () => {
               <div className="absolute bottom-5 left-5 right-5 rounded-[1.6rem] border border-white/10 bg-black/35 p-5 backdrop-blur-2xl">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <p className="mb-2 flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.18em] text-lime-300">
+                    <p className="mb-2 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-lime-300">
                       <FiMapPin />
                       {country.region}
                     </p>
 
-                    <h4 className="text-3xl font-black tracking-[-0.05em] text-[#f4f1e8]">
+                    <h4 className="text-3xl font-semibold tracking-[-0.05em] text-[#F6F5E8]">
                       {country.name}
                     </h4>
                   </div>
@@ -262,7 +262,7 @@ const GrobalWorkforceNetwork = () => {
                   </div>
                 </div>
 
-                <p className="mt-4 text-sm font-bold text-white/60">
+                <p className="mt-4 text-sm font-bold text-[#F6F5E8]/60">
                   {country.workers} available talent network
                 </p>
               </div>

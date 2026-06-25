@@ -153,15 +153,15 @@ const OurValue = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-visible px-5 py-24 text-white md:px-14 md:py-32"
+      className="relative overflow-visible px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
+      {/* <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
+      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       {/* floating preview */}
       <div
         ref={previewRef}
-        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-72 overflow-hidden rounded-[1.6rem] border border-white/15 bg-black/35 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
+        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-72 overflow-hidden rounded-[1.6rem] border border-white/15 bg-[#31323d]/35 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
       >
         <div className="relative h-44 overflow-hidden rounded-[1.2rem]">
           <img
@@ -187,7 +187,7 @@ const OurValue = () => {
         <div>
           <div className="mb-6 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-xl">
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-white/75">
+            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#F6F5E8]/85">
               Our Values
             </p>
           </div>
@@ -196,14 +196,14 @@ const OurValue = () => {
             <div key={index} className="overflow-hidden pb-1">
               <h2
                 ref={(el) => (titleRefs.current[index] = el)}
-                className="text-[2.9rem] font-black uppercase leading-[0.93] tracking-[-0.06em] text-[#f4f1e8] sm:text-[4rem] md:text-[5rem] xl:text-[5.7rem]"
+                className="text-[2.9rem] font-semibold uppercase leading-[0.93] tracking-[-0.06em] text-[#F6F5E8] sm:text-[4rem] md:text-[5rem] xl:text-[5rem]"
               >
                 {line}
               </h2>
             </div>
           ))}
 
-          <p className="mt-8 max-w-xl text-base leading-8 text-white/70 md:text-lg">
+          <p className="mt-8 max-w-xl text-base leading-8 font-montserrat text-[#F6F5E8]/70 md:text-lg">
             Like us, you prioritise partnering with companies that share your
             values. Here’s what makes our approach special.
           </p>
@@ -227,13 +227,13 @@ const OurValue = () => {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl font-black text-[#f4f1e8] md:text-2xl">
+                  <h3 className="text-xl font-semibold text-[#F6F5E8] md:text-2xl">
                     {item.title}
                   </h3>
 
                   <div className="my-4 h-px w-full bg-gradient-to-r from-white/20 to-transparent" />
 
-                  <p className="max-w-2xl text-sm leading-7 text-white/62 transition-all duration-500 group-hover:text-white/80">
+                  <p className="max-w-2xl text-sm font-montserrat leading-7 text-[#F6F5E8]/72 transition-all duration-500 group-hover:text-white/85">
                     {item.text}
                   </p>
                 </div>

@@ -182,7 +182,7 @@ const HeroImpact = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-visible bg-[#151820] px-5 py-28 text-white md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-visible bg-[#31323D] text-[#F6F5E8] px-5 py-28 font-arimo md:px-14 lg:py-36"
     >
       <Helmet>
         <title>Our Sustainability & Eco Impact | Future Wave Recruitment</title>
@@ -226,16 +226,13 @@ const HeroImpact = () => {
         </script>
       </Helmet>
 
-
       <SvgBackground className="opacity-60" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/75 to-[#10131a]/35" />
-      <div className="absolute -left-32 top-16 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[160px]" />
-      <div className="absolute -right-40 bottom-10 h-[600px] w-[600px] rounded-full bg-cyan-400/10 blur-[180px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/90 to-[#31323D]/90" />
 
       <div
         ref={previewRef}
-        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-80 overflow-hidden rounded-[1.7rem] border border-white/15 bg-black/35 p-2 opacity-0 shadow-[0_30px_100px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
+        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-80 overflow-hidden lg:block"
       >
         <div className="relative h-52 overflow-hidden rounded-[1.25rem]">
           <img
@@ -244,7 +241,7 @@ const HeroImpact = () => {
             alt={active.highlight}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#31323D]/85 via-[#31323D]/20 to-transparent" />
           <p
             ref={previewTitleRef}
             className="absolute bottom-5 left-5 right-5 text-sm font-black uppercase tracking-[0.16em] text-lime-300"
@@ -257,9 +254,9 @@ const HeroImpact = () => {
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="grid w-full gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <div>
-            <div className="mb-7 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-4 py-2 backdrop-blur-md">
+            <div className="mb-7 flex w-fit items-center gap-3 rounded-full border border-[#31323D]/10 bg-[#31323D]/[0.05] px-4 py-2 backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-              <p className="text-[11px] font-black uppercase tracking-[0.24em] text-white/75">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#F6F5E8]/75">
                 Our Impact
               </p>
             </div>
@@ -267,7 +264,7 @@ const HeroImpact = () => {
             <div className="overflow-hidden pb-2">
               <h1
                 ref={titleRef}
-                className="text-[4.2rem] font-black uppercase leading-[0.9] tracking-[-0.08em] text-[#f4f1e8] sm:text-[6rem] md:text-[8rem] xl:text-[10rem]"
+                className="text-[4.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] text-[#F6F5E8] sm:text-[6rem] md:text-[8rem] xl:text-[10rem]"
               >
                 Impact
               </h1>
@@ -275,7 +272,7 @@ const HeroImpact = () => {
 
             <p
               ref={descRef}
-              className="mt-10 max-w-xl text-lg leading-9 text-white/72 md:text-xl"
+              className="mt-10 max-w-xl text-lg leading-9 text-[#F6F5E8]/72 font-montserrat md:text-xl"
             >
               Our drive towards a more sustainable future dictates every choice
               we make — from who we work with to how we support them.
@@ -291,21 +288,21 @@ const HeroImpact = () => {
                   onMouseEnter={(e) => showPreview(item, e)}
                   onMouseMove={movePreview}
                   onMouseLeave={hidePreview}
-                  className="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/20 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-lime-300/50 hover:bg-white/[0.075] hover:shadow-[0_20px_70px_rgba(190,242,100,0.1)]"
+                  className="group relative overflow-hidden rounded-[1.5rem] border border-[#F6F5E8]/10 bg-[#31323d]/20 p-5 transition-all duration-500 hover:-translate-y-1 hover:border-lime-300/50 hover:bg-[#F6F5E8]/[0.075] hover:shadow-[0_20px_70px_rgba(190,242,100,0.1)]"
                 >
                   <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-lime-300/80 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100" />
 
                   <div className="flex gap-4">
-                    <span className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-lime-300 text-sm text-lime-300 transition-all duration-500 group-hover:rotate-45 group-hover:bg-lime-300 group-hover:text-black">
+                    <span className="mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-lime-300 text-sm text-lime-300 transition-all duration-500 group-hover:rotate-45 group-hover:bg-lime-300 group-hover:text-[#31323d]">
                       ✓
                     </span>
 
-                    <p className="text-base font-bold leading-8 text-white/78 transition-all duration-500 group-hover:text-white">
+                    <p className="text-base font-semibold font-montserrat leading-8 text-[#F6F5E8]/78 transition-all duration-500 group-hover:text-[#F6F5E8]">
                       {item.text}
                     </p>
                   </div>
 
-                  <div className="mt-4 block overflow-hidden rounded-[1.2rem] border border-white/10 lg:hidden">
+                  <div className="mt-4 block overflow-hidden rounded-[1.2rem] border border-[#F6F5E8]/10 lg:hidden">
                     <img
                       src={item.image}
                       alt={item.highlight}

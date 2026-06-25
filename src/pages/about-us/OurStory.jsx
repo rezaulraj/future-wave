@@ -141,19 +141,18 @@ const OurStory = () => {
     <section
       id="our-story"
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white bg-[#151820] md:px-14 md:py-32"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/90 to-[#31323D]/90" />
 
       <div className="container relative z-10 mx-auto grid gap-16 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div>
           <div
             ref={badgeRef}
-            className="mb-7 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 backdrop-blur-xl"
+            className="mb-7 flex w-fit items-center gap-3 rounded-full border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.04] px-4 py-2 backdrop-blur-xl"
           >
             <span className="h-2 w-2 rounded-full bg-lime-300 shadow-[0_0_18px_rgba(190,242,100,0.9)]" />
-            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-white/75">
+            <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#F6F5E8]/75">
               Our Story
             </p>
           </div>
@@ -163,8 +162,8 @@ const OurStory = () => {
               <div key={index} className="overflow-hidden pb-1">
                 <h2
                   ref={(el) => (titleRefs.current[index] = el)}
-                  className={`text-[3rem] font-black leading-[0.92] tracking-[-0.06em] sm:text-[4rem] md:text-[5rem] ${
-                    index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                  className={`text-[3rem] font-semibold leading-[0.92] tracking-[-0.06em] sm:text-[4rem] md:text-[4.5rem] ${
+                    index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                   }`}
                 >
                   {line}
@@ -176,17 +175,17 @@ const OurStory = () => {
           <div className="mt-8 space-y-5">
             <p
               ref={(el) => (paragraphRefs.current[0] = el)}
-              className="max-w-2xl text-base leading-8 text-white/70 md:text-lg"
+              className="max-w-2xl text-base leading-8 text-[#F6F5E8]/70 font-montserrat md:text-lg"
             >
-              Future Wave was built with one clear purpose: to help
-              employers find dependable people and help skilled workers reach
-              better opportunities through a process that feels simple,
-              respectful and reliable.
+              Future Wave was built with one clear purpose: to help employers
+              find dependable people and help skilled workers reach better
+              opportunities through a process that feels simple, respectful and
+              reliable.
             </p>
 
             <p
               ref={(el) => (paragraphRefs.current[1] = el)}
-              className="max-w-2xl text-base leading-8 text-white/70 md:text-lg"
+              className="max-w-2xl text-base leading-8 text-[#F6F5E8]/70 font-montserrat md:text-lg"
             >
               We support businesses with practical hiring guidance, careful
               candidate matching and partner-friendly communication, so every
@@ -200,7 +199,7 @@ const OurStory = () => {
                 <div
                   key={index}
                   ref={(el) => (pointRefs.current[index] = el)}
-                  className="flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-5 py-3 text-sm font-bold text-white/75 backdrop-blur-xl transition-all duration-500 hover:border-lime-300/50 hover:bg-lime-300 hover:text-black"
+                  className="flex items-center gap-3 rounded-full border border-white/10 bg-[#F6F5E8]/[0.05] px-5 py-3 text-sm font-bold text-[#F6F5E8]/75 backdrop-blur-xl transition-all duration-500 hover:border-lime-300/50 hover:bg-lime-300 hover:text-black"
                 >
                   <FiCheckCircle className="text-lime-300" />
                   {item}
@@ -212,7 +211,6 @@ const OurStory = () => {
 
         <div className="relative">
           <div className="relative min-h-[720px] lg:min-h-[640px]">
-            {/* triangle lines */}
             <svg
               className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
               viewBox="0 0 700 620"
@@ -230,7 +228,7 @@ const OurStory = () => {
               <circle cx="590" cy="440" r="7" fill="#bef264" />
             </svg>
 
-            <div className="absolute left-1/2 top-[47%] hidden h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-lime-300/25 bg-white/[0.04] backdrop-blur-xl lg:grid">
+            <div className="absolute left-1/2 top-[47%] hidden h-28 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-lime-300/25 bg-[#F6F5E8]/[0.04] backdrop-blur-xl lg:grid">
               <div className="h-10 w-10 rounded-full bg-lime-300 shadow-[0_0_50px_rgba(190,242,100,0.35)]" />
             </div>
 
@@ -249,21 +247,21 @@ const OurStory = () => {
                   <div
                     key={index}
                     ref={(el) => (cardRefs.current[index] = el)}
-                    className={`group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.045] p-7 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 hover:border-lime-300/50 hover:bg-white/[0.085] hover:shadow-[0_30px_100px_rgba(190,242,100,0.12)] lg:absolute lg:w-[46%] ${trianglePosition}`}
+                    className={`group relative overflow-hidden rounded-[2rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.045] p-7 shadow-[0_30px_100px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 hover:border-lime-300/50 hover:bg-[#F6F5E8]/[0.085] hover:shadow-[0_30px_100px_rgba(190,242,100,0.12)] lg:absolute lg:w-[46%] ${trianglePosition}`}
                   >
                     <div className="absolute -right-20 -top-20 h-44 w-44 rounded-full bg-lime-300/10 blur-3xl transition-all duration-500 group-hover:bg-lime-300/20" />
                     <div className="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-lime-300/70 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100" />
 
                     <div className="relative z-10">
-                      <div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl border border-lime-300/20 bg-lime-300/10 text-2xl text-lime-300 transition-all duration-500 group-hover:rotate-6 group-hover:bg-lime-300 group-hover:text-black">
+                      <div className="mb-8 grid h-14 w-14 place-items-center rounded-2xl border border-lime-300/20 bg-lime-300/10 text-2xl text-lime-300 transition-all duration-500 group-hover:rotate-6 group-hover:bg-lime-300 group-hover:text-[#31323d]">
                         <Icon />
                       </div>
 
-                      <h3 className="text-2xl font-black text-[#f4f1e8]">
+                      <h3 className="text-2xl font-semibold text-[#F6F5E8]">
                         {card.title}
                       </h3>
 
-                      <p className="mt-4 max-w-xl text-sm leading-7 text-white/62 transition-all duration-500 group-hover:text-white/80">
+                      <p className="mt-4 max-w-xl text-sm font-montserrat leading-7 text-[#F6F5E8]/62 transition-all duration-500 group-hover:text-[#F6F5E8]/80">
                         {card.text}
                       </p>
                     </div>
@@ -278,7 +276,7 @@ const OurStory = () => {
             <p className="text-[11px] font-black uppercase tracking-[0.24em] text-lime-300">
               Why partners trust us
             </p>
-            <h3 className="mt-4 text-3xl font-black leading-tight tracking-[-0.05em] text-[#f4f1e8]">
+            <h3 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.02em] text-[#F6F5E8]">
               Clear process. Strong people. Better hiring confidence.
             </h3>
           </div>

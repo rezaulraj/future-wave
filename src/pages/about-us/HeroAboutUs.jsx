@@ -97,7 +97,7 @@ const HeroAboutUs = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-[#151820] px-5 py-28 text-white md:px-14 lg:py-36"
+      className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8] font-arimo px-5 py-28 md:px-14 lg:py-36"
     >
       <Helmet>
         <title>
@@ -142,15 +142,15 @@ const HeroAboutUs = () => {
 
       <SvgBackground className="opacity-70" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/75 to-[#10131a]/20" />
-      <div className="absolute -left-28 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[150px]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D] to-[#31323D]/90" />
+      {/* <div className="absolute -left-28 top-20 h-[500px] w-[500px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
       {/* <div className="absolute -right-32 bottom-10 h-[560px] w-[560px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
       <div className="container relative z-10 mx-auto flex min-h-[calc(100vh-120px)] items-center">
         <div className="relative w-full">
           <div
             ref={imageBoxRef}
-            className="absolute right-0 top-1/2 hidden h-[72vh] w-[67%] -translate-y-1/2 overflow-hidden rounded-[2.7rem] border border-white/10 bg-white/[0.05] shadow-[0_35px_120px_rgba(0,0,0,0.6)] backdrop-blur-xl lg:block"
+            className="absolute right-0 top-1/2 hidden h-[72vh] w-[67%] -translate-y-1/2 overflow-hidden backdrop-blur-xl lg:block"
           >
             <img
               ref={imageRef}
@@ -159,14 +159,14 @@ const HeroAboutUs = () => {
               className="h-full w-full object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-r from-[#151820] via-[#151820]/55 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#31323D] via-[#31323D]/55 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
-            <div className="absolute bottom-8 right-8 max-w-sm rounded-[2rem] border border-white/10 bg-black/30 p-6 backdrop-blur-xl">
+            <div className="absolute bottom-8 right-8 max-w-sm rounded-[2rem] border border-[#F6F5E8]/10 bg-[#31323D]/30 p-6 backdrop-blur-xl">
               <p className="text-[10px] font-black uppercase tracking-[0.25em] text-lime-300">
                 About us
               </p>
-              <h3 className="mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#f4f1e8]">
+              <h3 className="mt-3 text-3xl font-black uppercase leading-none tracking-[-0.05em] text-[#F6F5E8]">
                 people first, hiring smarter
               </h3>
             </div>
@@ -184,7 +184,7 @@ const HeroAboutUs = () => {
               <span className="grid h-6 w-6 place-items-center rounded-full border border-lime-300 text-lime-300">
                 ◌
               </span>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-[11px]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F6F5E8]/80 sm:text-[11px]">
                 About Future Wave
               </p>
             </div>
@@ -194,8 +194,8 @@ const HeroAboutUs = () => {
                 <div key={index} className="overflow-hidden pb-1">
                   <h1
                     ref={(el) => (titleRefs.current[index] = el)}
-                    className={`text-[3rem] font-black uppercase leading-[0.88] tracking-[-0.075em] sm:text-[4.5rem] md:text-[5.5rem] xl:text-[6.5rem] ${
-                      index === 1 ? "text-lime-300" : "text-[#f4f1e8]"
+                    className={`text-[2.55rem] font-medium uppercase font-arimo leading-[1] tracking-[-0.01em] sm:text-[3.6rem] md:text-[4.5rem] xl:text-[4.5rem] ${
+                      index === 1 ? "text-lime-300" : "text-[#F6F5E8]"
                     }`}
                   >
                     {line}
@@ -206,7 +206,7 @@ const HeroAboutUs = () => {
 
             <p
               ref={textRef}
-              className="mt-8 max-w-md text-base leading-8 text-white/72 md:text-lg"
+              className="mt-8 max-w-xl text-base leading-8 font-montserrat text-[#F6F5E8]/72 md:text-lg"
             >
               We connect skilled people with trusted employers through clear,
               human and reliable recruitment support.
@@ -221,10 +221,10 @@ const HeroAboutUs = () => {
               </a>
 
               <div>
-                <h4 className="text-base font-bold uppercase tracking-wide md:text-lg">
+                <h4 className="text-base font-semibold uppercase tracking-wide md:text-lg">
                   Read our story
                 </h4>
-                <p className="mt-1 text-sm text-white/50">
+                <p className="mt-1 text-sm font-montserrat text-white/50">
                   Built on trust, people and progress
                 </p>
               </div>
@@ -239,12 +239,12 @@ const HeroAboutUs = () => {
                 <div
                   key={index}
                   ref={(el) => (statsRef.current[index] = el)}
-                  className="rounded-[1.4rem] border border-white/10 bg-white/[0.055] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-white/[0.09]"
+                  className="rounded-[1.4rem] border border-[#F6F5E8]/10 bg-[#F6F5E8]/[0.055] p-5 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-lime-300/50 hover:bg-[#F6F5E8]/[0.09]"
                 >
                   <h3 className="text-2xl font-black text-lime-300">
                     {item.value}
                   </h3>
-                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">
+                  <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F6F5E8]/50">
                     {item.label}
                   </p>
                 </div>
@@ -252,13 +252,13 @@ const HeroAboutUs = () => {
             </div>
           </div>
 
-          <div className="relative z-20 mt-12 h-[340px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] shadow-2xl lg:hidden">
+          <div className="relative z-20 mt-12 h-[340px] overflow-hidden shadow-2xl lg:hidden">
             <img
               src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1400&auto=format&fit=crop"
               alt="About Future Wave"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#31323d]/75 via-[#31323d]/10 to-transparent" />
           </div>
         </div>
       </div>

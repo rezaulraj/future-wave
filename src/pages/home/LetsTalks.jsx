@@ -92,7 +92,7 @@ const LetsTalks = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden px-5 py-24 text-white md:px-14"
+      className="relative overflow-hidden px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14"
     >
       <div
         ref={cardRef}
@@ -108,12 +108,12 @@ const LetsTalks = () => {
         <div className="relative z-10">
           <div
             ref={badgeRef}
-            className="mb-10 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-black/20 px-4 py-2 backdrop-blur-xl"
+            className="mb-10 flex w-fit items-center gap-3 rounded-full border border-white/10 bg-[#31323d]/20 px-4 py-2 backdrop-blur-xl"
           >
             <span className="grid h-7 w-7 place-items-center rounded-full border border-lime-300/60 text-lime-300">
               ◌
             </span>
-            <p className="text-[11px] font-black uppercase tracking-[0.22em] text-white/75">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F6F5E8]/85">
               Let’s Talk
             </p>
           </div>
@@ -123,7 +123,7 @@ const LetsTalks = () => {
               <div key={index} className="overflow-hidden pb-1">
                 <h2
                   ref={(el) => (titleRefs.current[index] = el)}
-                  className="max-w-5xl text-[2.7rem] font-black uppercase leading-[0.92] tracking-[-0.06em] text-[#f4f1e8] sm:text-[4rem] md:text-[5.4rem] xl:text-[6.2rem]"
+                  className="max-w-5xl text-[2.7rem] font-semibold uppercase leading-[0.92] tracking-[-0.06em] text-[#F6F5E8] sm:text-[4rem] md:text-[5.4rem] xl:text-[6rem]"
                 >
                   {line}
                 </h2>

@@ -67,7 +67,6 @@ const clients = [
   },
 ];
 
-// Duplicate 4× for seamless infinite loop
 const row1Clients = [...clients, ...clients, ...clients, ...clients];
 const row2Clients = [...clients]
   .reverse()
@@ -77,7 +76,6 @@ const row2Clients = [...clients]
     [...clients].reverse(),
   );
 
-/* ── Marquee card ── */
 const MarqueeCard = ({ client, index }) => {
   const cardRef = useRef(null);
   const iconRef = useRef(null);
@@ -152,7 +150,6 @@ const MarqueeCard = ({ client, index }) => {
         }}
       />
 
-      {/* icon */}
       <div
         ref={iconRef}
         style={{
@@ -186,7 +183,6 @@ const MarqueeCard = ({ client, index }) => {
         {client.name}
       </span>
 
-      {/* bottom bar */}
       <span
         style={{
           display: "block",
@@ -199,7 +195,6 @@ const MarqueeCard = ({ client, index }) => {
         }}
       />
 
-      {/* bottom glow */}
       <div
         style={{
           position: "absolute",
@@ -216,7 +211,6 @@ const MarqueeCard = ({ client, index }) => {
   );
 };
 
-/* ── Main Section ── */
 const Client = () => {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
@@ -229,7 +223,6 @@ const Client = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* --- Header entrance --- */
       gsap.fromTo(
         titleRef.current,
         { y: 55, opacity: 0, filter: "blur(14px)" },
@@ -243,7 +236,6 @@ const Client = () => {
         },
       );
 
-      /* --- Row 1: slide in from left, then infinite scroll left --- */
       gsap.fromTo(
         row1Ref.current,
         { x: -100, opacity: 0 },
@@ -257,7 +249,6 @@ const Client = () => {
         },
       );
 
-      /* --- Row 2: slide in from right --- */
       gsap.fromTo(
         row2Ref.current,
         { x: 100, opacity: 0 },
@@ -271,7 +262,6 @@ const Client = () => {
         },
       );
 
-      /* --- Stats --- */
       gsap.fromTo(
         statsRef.current,
         { y: 35, opacity: 0 },
@@ -293,7 +283,6 @@ const Client = () => {
     const totalW1 = row1Ref.current?.scrollWidth / 2 ?? 0;
     const totalW2 = row2Ref.current?.scrollWidth / 2 ?? 0;
 
-    // Row 1 scrolls left (negative X)
     gsapRow1.current = gsap.to(row1Ref.current, {
       x: `-=${totalW1}`,
       duration: 30,
@@ -304,7 +293,6 @@ const Client = () => {
       },
     });
 
-    // Row 2 scrolls right (positive X)
     gsapRow2.current = gsap.fromTo(
       row2Ref.current,
       { x: -totalW2 / 2 },
@@ -339,19 +327,16 @@ const Client = () => {
   return (
     <section
       ref={sectionRef}
+      className="bg-[#31323D] text-[#F6F5E8] font-arimo"
       style={{
         position: "relative",
         overflow: "hidden",
         padding: "80px 0",
-        // background: "#070810",
-        color: "#fff",
       }}
     >
-      {/* Ambient blobs */}
-       <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
+      {/* <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" /> */}
       {/* <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" /> */}
 
-      {/* ── Header ── */}
       <div
         ref={titleRef}
         style={{
@@ -399,8 +384,8 @@ const Client = () => {
         </div>
 
         <h2
+          className="text-[#F6F5E8] font-arimo font-semibold"
           style={{
-            fontFamily: "'Syne', sans-serif",
             fontSize: "clamp(32px,5vw,58px)",
             fontWeight: 800,
             textTransform: "uppercase",
@@ -411,11 +396,11 @@ const Client = () => {
           Trusted by <span style={{ color: "#bef264" }}>Pioneers</span>
         </h2>
         <p
+        className="font-montserrat text-[#F6F5E8]/80"
           style={{
             marginTop: 12,
             fontSize: "clamp(13px,2vw,17px)",
             fontWeight: 300,
-            color: "rgba(255,255,255,0.4)",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
           }}
@@ -433,7 +418,6 @@ const Client = () => {
         />
       </div>
 
-      {/* ── Marquee ── */}
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -445,7 +429,6 @@ const Client = () => {
           gap: 18,
         }}
       >
-        {/* Fade edges */}
         <div
           style={{
             position: "absolute",
@@ -471,7 +454,6 @@ const Client = () => {
           }}
         />
 
-        {/* Row 1 → scrolls left */}
         <div style={{ overflow: "hidden", position: "relative" }}>
           <div
             ref={row1Ref}
@@ -483,7 +465,6 @@ const Client = () => {
           </div>
         </div>
 
-        {/* Row 2 → scrolls right */}
         <div style={{ overflow: "hidden", position: "relative" }}>
           <div
             ref={row2Ref}
@@ -496,7 +477,6 @@ const Client = () => {
         </div>
       </div>
 
-      {/* ── Stats ── */}
       <div
         style={{
           position: "relative",
@@ -537,7 +517,7 @@ const Client = () => {
                 border: "1px solid rgba(255,255,255,0.1)",
                 display: "grid",
                 placeItems: "center",
-                color: "#bef264",
+                color: "#F6F5E8",
                 fontSize: 18,
               }}
             >
@@ -546,7 +526,6 @@ const Client = () => {
             <div>
               <div
                 style={{
-                  fontFamily: "'Syne', sans-serif",
                   fontSize: 28,
                   fontWeight: 800,
                   lineHeight: 1,
@@ -555,9 +534,9 @@ const Client = () => {
                 {item.value}
               </div>
               <div
+              className="text-[#F6F5E8]/80"
                 style={{
                   fontSize: 12,
-                  color: "rgba(255,255,255,0.4)",
                   marginTop: 2,
                 }}
               >

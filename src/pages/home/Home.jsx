@@ -52,9 +52,9 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="relative min-h-screen overflow-hidden md:overflow-visible text-white bg-[#151820]">
+    <main className="relative min-h-screen overflow-hidden md:overflow-visible text-white bg-[#31323D]">
       {/* <SvgBackground /> */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#31323D]/95 via-[#31323D]/70 to-[#31323D]/20" />
       <section
         ref={(el) => (sectionRefs.current[0] = el)}
         className="relative z-10 min-h-screen"

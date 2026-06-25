@@ -188,14 +188,11 @@ const ServiceList = () => {
     <section
       ref={sectionRef}
       id="service-list"
-      className="relative overflow-visible px-5 py-24 text-white  md:px-14 md:py-32"
+      className="relative overflow-visible px-5 py-24 bg-[#31323D] text-[#F6F5E8] font-arimo md:px-14 md:py-32"
     >
-      <div className="absolute left-0 top-0 h-[520px] w-[520px] rounded-full bg-lime-300/10 blur-[150px]" />
-      <div className="absolute bottom-0 right-0 h-[520px] w-[520px] rounded-full bg-cyan-400/10 blur-[170px]" />
-
       <div
         ref={previewRef}
-        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-72 overflow-hidden rounded-[1.6rem] border border-white/15 bg-black/35 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
+        className="pointer-events-none absolute left-0 top-0 z-50 hidden w-72 overflow-hidden rounded-[1.6rem] border border-[#F6F5E8]/15 bg-[#31323d]/35 p-2 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.75)] backdrop-blur-xl lg:block"
       >
         <div className="relative h-44 overflow-hidden rounded-[1.2rem]">
           <img
@@ -204,7 +201,7 @@ const ServiceList = () => {
             alt={activePreview.title}
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#31323d]/85 via-[#31323d]/15 to-transparent" />
           <p
             ref={previewTitleRef}
             className="absolute bottom-4 left-4 right-4 text-sm font-black uppercase tracking-[0.15em] text-lime-300"
