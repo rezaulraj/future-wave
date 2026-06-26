@@ -190,18 +190,18 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className="relative overflow-hidden bg-[#31323d]/95 text-[#F6F5E8] font-arimo"
+      className="relative overflow-hidden bg-[#31323D]/95 text-[#F6F5E8] font-arimo"
     >
-      {/* <SvgBackground className="opacity-10" /> */}
-
-      {/* <div className="absolute inset-0 bg-gradient-to-r from-[#10131a]/95 via-[#10131a]/70 to-[#10131a]/20" /> */}
-
       <div className="relative px-5 py-6 md:px-14">
         <div className="container relative z-10 mx-auto grid gap-10 md:grid-cols-[1fr_1.2fr] md:items-end">
           <div className="flex flex-col gap-8">
             <div ref={logoRef}>
               <a href="/" className="group flex items-center gap-3">
-                <img src="/new-logo.png" alt="" className="h-14" />
+                <img
+                  src="/logo-update.png"
+                  alt="feture wave"
+                  className="h-14"
+                />
               </a>
             </div>
 
