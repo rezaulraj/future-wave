@@ -13,15 +13,15 @@ const LiveJob = () => {
     <main className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8]">
       <SvgBackground className="opacity-100 fixed" />
       <div className="relative z-10">
-        <section className="relative min-h-screen">
+        <section className="relative">
           <HeroLivejob />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <JobList />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <LetsTalks />
         </section>
       </div>

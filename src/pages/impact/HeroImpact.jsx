@@ -5,28 +5,28 @@ import { Helmet } from "react-helmet-async";
 
 const impactItems = [
   {
-    text: "Every time we successfully place a candidate, we plant 10 trees.",
-    highlight: "10 trees",
+    text: "Connecting talent with international opportunities",
+    highlight: "Connecting talent",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1764702365155-4430df293faa?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    text: "We invest 1% of profit into carbon removal initiatives.",
-    highlight: "1% of profit",
+    text: "Helping employers access skilled and qualified professionals",
+    highlight: "Qualified Professionals",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1569496736555-47c448d556f7?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    text: "We have built a carbon-conscious website with Future Selves.",
-    highlight: "carbon-conscious",
+    text: "Supporting career growth and long-term success",
+    highlight: "Career Growth",
     image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1682309553075-c84ea8d9d49a?q=80&w=912&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    text: "We run an internship scheme for under-represented groups.",
-    highlight: "internship scheme",
+    text: "Building diverse, high-performing workforces",
+    highlight: "High-performing Workforces",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1661389568756-c47d565d8a5a?q=80&w=1114&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     text: "We make ethical decisions when gifting for candidates and clients.",
@@ -35,10 +35,10 @@ const impactItems = [
       "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    text: "We donate to The Ocean Cleanup to help remove plastic from oceans.",
-    highlight: "The Ocean Cleanup",
+    text: "Creating lasting value for businesses and communities",
+    highlight: "Businesses and Communities",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1634936016780-65f6a77ebdd4?q=80&w=739&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -270,8 +270,20 @@ const HeroImpact = () => {
               ref={descRef}
               className="mt-10 max-w-xl text-lg leading-9 text-[#F6F5E8]/72 font-montserrat md:text-xl"
             >
-              Our drive towards a more sustainable future dictates every choice
-              we make — from who we work with to how we support them.
+              At Future Wave, we create meaningful connections between talented
+              professionals and leading employers across the globe. Our work
+              goes beyond recruitment—we help individuals unlock new
+              opportunities while enabling businesses to build stronger, more
+              capable teams.
+            </p>
+            <p
+              ref={descRef}
+              className="mt-10 max-w-2xl mx-auto text-lg leading-9 text-[#F6F5E8]/72 font-montserrat md:text-xl"
+            >
+              Every successful placement represents a new opportunity, a
+              stronger organization, and a brighter future. Through our
+              people-first approach and smart recruitment solutions, we continue
+              to make a positive impact on careers and businesses worldwide.
             </p>
           </div>
 
@@ -309,6 +321,24 @@ const HeroImpact = () => {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+      
+      <div className="container mx-auto pt-30">
+        <h1
+          ref={titleRef}
+          className="max-w-4xl mx-auto text-[2.2rem] font-semibold uppercase leading-[0.9] tracking-[-0.08em] text-[#F6F5E8] sm:text-[3rem] md:text-[4rem] xl:text-[5rem] text-center"
+        >
+          Connecting the Right People to the Right Opportunities.
+        </h1>
+        <div className="flex items-center justify-center mt-16">
+          <a
+            href="/contact"
+            className="group relative w-fit overflow-hidden rounded-full border border-lime-300 px-7 py-4 text-[1.5rem] font-semibold uppercase tracking-[0.18em] text-[#F6F5E8] transition-all duration-500 hover:scale-105 hover:text-black"
+          >
+            <span className="absolute inset-0 -translate-x-full bg-lime-300 transition-transform duration-500 group-hover:translate-x-0" />
+            <span className="relative z-10">Contact Now</span>
+          </a>
         </div>
       </div>
     </section>

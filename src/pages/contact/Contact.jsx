@@ -17,27 +17,27 @@ const Contact = () => {
     <main className="relative min-h-screen overflow-hidden bg-[#31323d] text-[#F6F5E8]">
       <SvgBackground className="opacity-100 fixed" />
       <div className="relative z-10">
-        <section className="relative min-h-screen">
+        <section className="relative">
           <HeroContact />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <ContactFrom />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <OurLocations />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <ReletedArticals />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <Faqs />
         </section>
 
-        <section className="relative min-h-screen">
+        <section className="relative">
           <LetsTalks />
         </section>
       </div>

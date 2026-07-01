@@ -264,13 +264,14 @@ const Footer = () => {
         ref={bottomRef}
         className="relative z-10 bg-[#F6F5E8] px-5 py-7 text-[#31323d] md:px-14"
       >
-        <div className="container mx-auto flex flex-col justify-between gap-4 text-sm md:flex-row md:items-center">
-          <p className="text-lg font-montserrat font-light">
+        <div className="container mx-auto text-center">
+          {/* <p className="text-lg font-montserrat font-light">
             This page loaded in 1.4s, emitting ~0.090g of CO₂e.
-          </p>
+          </p> */}
 
           <p className="text-xs font-medium uppercase tracking-[0.2em] ">
-            Website design by Future Wave Recruitment / Development by Tempest
+            Website design by Future Wave Recruitment / Development by Future
+            Wave Tech
           </p>
         </div>
       </div>

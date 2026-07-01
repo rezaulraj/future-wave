@@ -13,7 +13,6 @@ import Contact from "./pages/contact/Contact";
 import ComminityResourses from "./pages/comminity-resourses/ComminityResourses";
 import BlogDescription from "./pages/comminity-resourses/BlogDescription";
 
-/* scroll top on route change */
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 

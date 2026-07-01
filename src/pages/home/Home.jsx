@@ -16,42 +16,42 @@ const Home = () => {
   useSmoothScroll();
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#31323D] text-[#F6F5E8]">
+    <main className="relative min-h-screen overflow-hidden md:overflow-visible bg-[#31323D] text-[#F6F5E8]">
       <SvgBackground className="opacity-100 fixed bg-[#31323D]" />
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <HomeHero />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <Challenges />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <OurMission />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <WhatWeDo />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <GrobalWorkforceNetwork />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <Spatialitys />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <OurValue />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <Cliend />
       </section>
 
-      <section className="relative z-10 min-h-screen">
+      <section className="relative z-10">
         <LetsTalks />
       </section>
     </main>
